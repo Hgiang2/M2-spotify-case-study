@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Cruel Summer",
+    "artist": "Taylor Swift",
+    "genre": {
+      "genres": [
+        "Pop"
+      ]
+    },
+    "time": 1699608409158,
+    "date": "10/11/2023, 16:26:49",
+    "isStream": false
+  },
+  {
+    "name": "Love Story",
+    "artist": "Taylor Swift",
+    "genre": {
+      "genres": [
+        "Pop",
+        "Country"
+      ]
+    },
+    "time": 1699608409327,
+    "date": "10/11/2023, 16:26:49",
+    "isStream": false
+  },
+  {
+    "name": "Memories",
+    "artist": "Maroon 5",
+    "genre": {
+      "genres": [
+        "Rock",
+        "Soft Rock"
+      ]
+    },
+    "time": 1699608409327,
+    "date": "10/11/2023, 16:26:49",
+    "isStream": false
+  },
+  {
+    "name": "I Knew You Were Trouble",
+    "artist": "Taylor Swift",
+    "genre": {
+      "genres": [
+        "Pop",
+        "EDM",
+        "Rock"
+      ]
+    },
+    "time": 1699608409327,
+    "date": "10/11/2023, 16:26:49",
+    "isStream": false
+  },
+  {
+    "name": "One Thing",
+    "artist": "One Direction",
+    "genre": {
+      "genres": [
+        "Pop",
+        "Rock"
+      ]
+    },
+    "time": 1699608409327,
+    "date": "10/11/2023, 16:26:49",
+    "isStream": false
+  }
+]
