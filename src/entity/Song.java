@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Song {
     private String name;
-    private String artist;
+    private Artist artist;
     private Genre genre;
     private long time;
     private String date;
@@ -14,7 +14,7 @@ public class Song {
 
     public Song(String name, String artist) {
         this.name = name;
-        this.artist = artist;
+        this.artist = new Artist(artist);
         this.genre = new Genre("No genre");
         this.time = System.currentTimeMillis();
         this.date = Constants.FORMAT_DATE.formatDate();
@@ -24,7 +24,7 @@ public class Song {
 
     public Song(String name, String artist, String genre) {
         this.name = name;
-        this.artist = artist;
+        this.artist = new Artist(artist);
         this.genre = new Genre(genre);
         this.time = System.currentTimeMillis();
         this.date = Constants.FORMAT_DATE.formatDate();
@@ -40,7 +40,7 @@ public class Song {
         this.name = name;
     }
 
-    public String getArtist() {
+    public Artist getArtist() {
         return artist;
     }
 
@@ -53,7 +53,7 @@ public class Song {
     }
 
     public void setArtist(String artist) {
-        this.artist = artist;
+        this.artist = new Artist(artist);
     }
 
     public List<String> getGenre() {

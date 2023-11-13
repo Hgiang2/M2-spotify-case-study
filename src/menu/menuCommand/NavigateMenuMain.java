@@ -2,6 +2,7 @@ package menu.menuCommand;
 
 import constant.Constants;
 import menu.service.mainMenuCommand.searchNewMusic.CommandExploreNewMusic;
+import menu.service.mainMenuCommand.yourSongs.CommandDisplayAllSongs;
 import menu.service.userCommand.CurrentUser;
 
 public class NavigateMenuMain implements Navigator {
@@ -12,7 +13,7 @@ public class NavigateMenuMain implements Navigator {
         menuMain.addMenuItem(new MenuItem("Log out", Constants.BACK_TO_START));
         menuMain.addMenuItem(new MenuItem("Explore new music", new CommandExploreNewMusic()));
         menuMain.addMenuItem(new MenuItem("Search your library", new CommandSearchLocal()));
-        menuMain.addMenuItem(new MenuItem("Your songs", new CommandAllSongs()));
+        menuMain.addMenuItem(new MenuItem("Your songs", new CommandDisplayAllSongs()));
         menuMain.addMenuItem(new MenuItem("Your playlists", new CommandAllPlaylists()));
         menuMain.runMenu();
     }

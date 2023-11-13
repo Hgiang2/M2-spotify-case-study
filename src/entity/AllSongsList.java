@@ -14,8 +14,8 @@ public class AllSongsList implements Observer {
 
     private AllSongsList() {
         Type songType = new TypeToken<List<Song>>() {}.getType();
-        allSongs = new ArrayList<>();
-//        allSongs = (ArrayList<Song>) Constants.fileHandler.readFromFile(Constants.ALL_SONG_FILE_PATH, songType);
+//        allSongs = new ArrayList<>();
+        allSongs = (ArrayList<Song>) Constants.fileHandler.readFromFile(Constants.ALL_SONG_FILE_PATH, songType);
     }
 
     public static AllSongsList getInstance() {
@@ -32,6 +32,6 @@ public class AllSongsList implements Observer {
     @Override
     public void update() {
         Constants.fileHandler.saveToFile(Constants.ALL_SONG_FILE_PATH, allSongs);
-        Song lastSong = allSongs.getLast();
+        Song lastSong = (Song) allSongs.getLast();
         System.out.println(lastSong.getName() + " by " + lastSong.getArtist() + " added successfully!");}
 }
