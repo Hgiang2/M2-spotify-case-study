@@ -11,6 +11,9 @@ public  class Subject {
     protected void removeObserver(Observer observer) {
         observers.remove(observer);
     }
+    protected void removeAll() {
+        observers.clear();
+    }
     protected void notifyObserver(){
         for(Observer observer : observers) {
             observer.update();

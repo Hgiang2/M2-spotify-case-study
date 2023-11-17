@@ -1,67 +1,74 @@
 [
   {
-    "name": "Cruel Summer",
-    "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop"
-      ]
-    },
-    "time": 1699608409158,
-    "date": "10/11/2023, 16:26:49",
-    "isStream": false
+    "name": "Everytime",
+    "artist": "Ariana Grande",
+    "genre": [
+      "Pop",
+      "R\u0026B"
+    ],
+    "time": 1700103163346,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Everytime_ArianaGrande.wav"
   },
   {
-    "name": "Love Story",
-    "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Country"
-      ]
-    },
-    "time": 1699608409327,
-    "date": "10/11/2023, 16:26:49",
-    "isStream": false
+    "name": "One Last Time",
+    "artist": "Ariana Grande",
+    "genre": [
+      "Pop",
+      "Country"
+    ],
+    "time": 1700103163345,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/OneLastTime_ArianaGrande.wav"
   },
   {
-    "name": "Memories",
+    "name": "Red",
+    "artist": "Taylor Swift",
+    "genre": [
+      "Pop",
+      "Country",
+      "Rock"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Red_TaylorSwift.wav"
+  },
+  {
+    "name": "Fearless",
+    "artist": "Taylor Swift",
+    "genre": [
+      "Pop",
+      "Country"
+    ],
+    "time": 1700103163348,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Fearless_TaylorSwift.wav"
+  },
+  {
+    "name": "I Want It That Way",
+    "artist": "Backstreet Boys",
+    "genre": [
+      "Pop"
+    ],
+    "time": 1700103163348,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/IWantItThatWay_BackstreetBoys.wav"
+  },
+  {
+    "name": "Payphone",
     "artist": "Maroon 5",
-    "genre": {
-      "genres": [
-        "Rock",
-        "Soft Rock"
-      ]
-    },
-    "time": 1699608409327,
-    "date": "10/11/2023, 16:26:49",
-    "isStream": false
-  },
-  {
-    "name": "I Knew You Were Trouble",
-    "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "EDM",
-        "Rock"
-      ]
-    },
-    "time": 1699608409327,
-    "date": "10/11/2023, 16:26:49",
-    "isStream": false
-  },
-  {
-    "name": "One Thing",
-    "artist": "One Direction",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Rock"
-      ]
-    },
-    "time": 1699608409327,
-    "date": "10/11/2023, 16:26:49",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "R\u0026B"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Payphone_Maroon5.wav"
   }
 ]

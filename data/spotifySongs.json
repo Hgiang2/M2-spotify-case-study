@@ -2,265 +2,242 @@
   {
     "name": "Cruel Summer",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop"
-      ]
-    },
-    "time": 1699608918220,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop"
+    ],
+    "time": 1700103162847,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/CruelSummer_TaylorSwift.wav"
   },
   {
     "name": "Love Story",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Country"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Country"
+    ],
+    "time": 1700103163342,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/LoveStory_TaylorSwift.wav"
   },
   {
     "name": "Memories",
     "artist": "Maroon 5",
-    "genre": {
-      "genres": [
-        "Rock",
-        "Soft Rock"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Rock",
+      "Soft Rock"
+    ],
+    "time": 1700103163342,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Memories_Maroon5.wav"
   },
   {
     "name": "I Knew You Were Trouble",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "EDM",
-        "Rock"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "EDM",
+      "Rock"
+    ],
+    "time": 1700103163343,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/IKnewYouWereTrouble_TaylorSwift.wav"
   },
   {
     "name": "One Thing",
     "artist": "One Direction",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Rock"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
+    "time": 1700103163343,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/OneThing_OneDirection.wav"
   },
   {
     "name": "Red",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Country",
-        "Rock"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Country",
+      "Rock"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Red_TaylorSwift.wav"
   },
   {
     "name": "Enchanted",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Ballad",
-        "Pop",
-        "Rock",
-        "Country"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Ballad",
+      "Pop",
+      "Rock",
+      "Country"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Enchanted_TaylorSwift.wav"
   },
   {
     "name": "Payphone",
     "artist": "Maroon 5",
-    "genre": {
-      "genres": [
-        "Pop",
-        "R\u0026B"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "R\u0026B"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Payphone_Maroon5.wav"
   },
   {
-    "name": "OneMoreNight",
+    "name": "One More Night",
     "artist": "Maroon 5",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Rock"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
+    "time": 1700103163344,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/OneMoreNight_Maroon5.wav"
   },
   {
     "name": "What Makes You Beautiful",
     "artist": "One Direction",
-    "genre": {
-      "genres": [
-        "Pop"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop"
+    ],
+    "time": 1700103163345,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/WhatMakesYouBeautiful_OneDirection.wav"
   },
   {
     "name": "7 Rings",
     "artist": "Ariana Grande",
-    "genre": {
-      "genres": [
-        "Pop"
-      ]
-    },
-    "time": 1699608918394,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop"
+    ],
+    "time": 1700103163345,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/7Rings_ArianaGrande.wav"
   },
   {
     "name": "One Last Time",
     "artist": "Ariana Grande",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Country"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Country"
+    ],
+    "time": 1700103163345,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/OneLastTime_ArianaGrande.wav"
   },
   {
-    "name": "Everyday",
+    "name": "Everytime",
     "artist": "Ariana Grande",
-    "genre": {
-      "genres": [
-        "Pop",
-        "EDM",
-        "Rock"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "R\u0026B"
+    ],
+    "time": 1700103163346,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Everytime_ArianaGrande.wav"
   },
   {
     "name": "Santa Tell Me",
     "artist": "Ariana Grande",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Country",
-        "Rock"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
-  },
-  {
-    "name": "Thank U, Next",
-    "artist": "Ariana Grande",
-    "genre": {
-      "genres": [
-        "Ballad",
-        "Pop",
-        "Rock",
-        "Country"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Country",
+      "Rock"
+    ],
+    "time": 1700103163346,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/SantaTellMe_ArianaGrande.wav"
   },
   {
     "name": "Mean",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Rock",
-        "Soft Rock"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Rock",
+      "Soft Rock"
+    ],
+    "time": 1700103163347,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Mean_TaylorSwift.wav"
   },
   {
     "name": "Fifteen",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "R\u0026B"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "R\u0026B"
+    ],
+    "time": 1700103163347,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Fifteen_TaylorSwift.wav"
   },
   {
     "name": "Look What You Made Me Do",
     "artist": "Taylor Swift",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Rock"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
+    "time": 1700103163347,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/LookWhatYouMadeMeDo_TaylorSwift.wav"
   },
   {
     "name": "As Long As You Love Me",
     "artist": "Backstreet Boys",
-    "genre": {
-      "genres": [
-        "Pop",
-        "Rock"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
+    "time": 1700103163348,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/AsLongAsYouLoveMe_BackstreetBoys.wav"
   },
   {
     "name": "I Want It That Way",
     "artist": "Backstreet Boys",
-    "genre": {
-      "genres": [
-        "Pop"
-      ]
-    },
-    "time": 1699608918395,
-    "date": "10/11/2023, 16:35:18",
-    "isStream": false
+    "genre": [
+      "Pop"
+    ],
+    "time": 1700103163348,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/IWantItThatWay_BackstreetBoys.wav"
+  },
+  {
+    "name": "Fearless",
+    "artist": "Taylor Swift",
+    "genre": [
+      "Pop",
+      "Country"
+    ],
+    "time": 1700103163348,
+    "date": "16/11/2023, 09:52:43",
+    "isStream": false,
+    "musicPath": "audio/Fearless_TaylorSwift.wav"
   }
 ]

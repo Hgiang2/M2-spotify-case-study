@@ -1,12 +1,14 @@
 package entity;
 
+import services.AllSongsListManagement;
+
 import java.util.List;
 
 public class CurrentSong {
     private List<Song> songList;
     private Song currentSong;
     private CurrentSong() {
-        songList = AllSongsList.getInstance().getAllSongs();
+        songList = AllSongsListManagement.getInstance().getSongs();
     }
     private static CurrentSong instance;
     public static CurrentSong getInstance() {

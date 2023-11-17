@@ -1,6 +1,7 @@
 package entity;
 
 import constant.Constants;
+import services.AllPlaylistsListManagement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +14,17 @@ public class Playlist {
     private String date;
     private boolean isStream;
 
+    public Playlist() {
+    }
+
     public Playlist(String name) {
         this.name = name;
-        this.songsInPlaylist = new ArrayList<>();
+//        this.songsInPlaylist = new ArrayList<>();
         this.time = System.currentTimeMillis();
         this.date= Constants.FORMAT_DATE.formatDate();
         this.isStream = false;
-        AllPlaylistsList.getInstance().getAllPlaylists().add(this);
+        this.songsInPlaylist = new ArrayList<>();
+        AllPlaylistsListManagement.getInstance().getAllPlaylists().add(this);
     }
 
     public String getName() {
@@ -41,17 +46,17 @@ public class Playlist {
     public List<Song> getSongsInPlaylist() {
         return songsInPlaylist;
     }
-    public List<Song> getSongsNotInPlaylist() {
-        List<Song> allSongs = AllSongsList.getInstance().getAllSongs();
-        List<Song> songsNotInPlaylist = new ArrayList<>();
-//        return allSongs.stream()
-//                .filter(song -> allSongs.contains(songsInPlaylist))
-//                .collect(Collectors.toList());
-        for (int i = 0; i < songsInPlaylist.size(); i++) {
-            if (allSongs.get(i) == songsInPlaylist.get(i)) songsNotInPlaylist.add(allSongs.get(i));
-        }
-        return songsNotInPlaylist;
-    }
+//    public List<Song> getSongsNotInPlaylist() {
+//        List<Song> allSongs = services.AllSongsList.getInstance().getAllSongs();
+//        List<Song> songsNotInPlaylist = new ArrayList<>();
+////        return allSongs.stream()
+////                .filter(song -> allSongs.contains(songsInPlaylist))
+////                .collect(Collectors.toList());
+//        for (int i = 0; i < songsInPlaylist.size(); i++) {
+//            if (allSongs.get(i) == songsInPlaylist.get(i)) songsNotInPlaylist.add(allSongs.get(i));
+//        }
+//        return songsNotInPlaylist;
+//    }
 
     public boolean isStream() {
         return isStream;
@@ -65,54 +70,11 @@ public class Playlist {
     public String toString() {
         return name;
     }
-
 //
 //    @Override
-//    public void addSong(Song song) {
-//        songsInPlaylist.add(song);
-//        Constants.ALL_SONGS.add(song);
-//    }
-//
-//    public void addMultipleSongsFromExistedList(String songNumbers) {
-//        String[] songNumbersAdd = songNumbers.split(" ");
-//        for (String number : songNumbersAdd) {
-//            songsInPlaylist.add(Constants.ALL_SONGS.get(Integer.parseInt(number)));
-//        }
-//    }
-//
-//    @Override
-//    public void removeMultiple(String numbers) {
-//        String[] songNumbersRemove = numbers.split(" ");
-//        for (String number : songNumbersRemove) {
-//            songsInPlaylist.remove(songsInPlaylist.get(Integer.parseInt(number)));
-//        }
-//    }
-//
-//    @Override
-//    public void displayAll() {
-//        System.out.println("Playlist: " + name);
-//        Constants.DISPLAY_LIST.displayList(songsInPlaylist);
-//    }
-//
-//    @Override
-//    public void sortAZ() {
-//        songsInPlaylist.sort(Constants.SORT_SONG_BY_NAME);
-//    }
-//
-//    @Override
-//    public void sortZA() {
-//        songsInPlaylist.sort(Constants.SORT_SONG_BY_NAME);
-//        Collections.reverse(songsInPlaylist);
-//    }
-//
-//    @Override
-//    public void sortByNewest() {
-//        songsInPlaylist.sort(Constants.SORT_SONG_BY_DATE);
-//        Collections.reverse(songsInPlaylist);
-//    }
-//
-//    @Override
-//    public void sortByOldest() {
-//        songsInPlaylist.sort(Constants.SORT_SONG_BY_DATE);
+//    public void update() {
+//        List<Song> songs = new SongInPlaylistManagement(this).getSongsInPlaylist();
+//        songs.sort(Constants.SORT_SONG_BY_DATE);
+//        songsInPlaylist = songs;
 //    }
 }

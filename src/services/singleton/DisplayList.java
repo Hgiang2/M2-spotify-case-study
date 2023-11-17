@@ -17,7 +17,7 @@ public class DisplayList {
 
     public void displayList(List<?> list) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.println(i + 1 + ". " + list.get(i).toString());
+            System.out.println(i + ". " + list.get(i).toString());
         }
     }
 

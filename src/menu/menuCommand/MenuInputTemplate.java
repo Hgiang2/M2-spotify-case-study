@@ -21,6 +21,7 @@ public class MenuInputTemplate implements Menu {
 
     @Override
     public void display() {
+        System.out.println();
         System.out.println(description);
         for (MenuItem menuItem : menuItems) {
             System.out.print(menuItem.getName());

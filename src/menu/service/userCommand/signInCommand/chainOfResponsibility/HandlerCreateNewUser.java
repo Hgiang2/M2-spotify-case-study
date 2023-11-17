@@ -1,11 +1,10 @@
 package menu.service.userCommand.signInCommand.chainOfResponsibility;
 
-import entity.Song;
+import entity.User;
 import menu.service.userCommand.HandlerUser;
 import menu.service.userCommand.RequestUser;
+import menu.service.userCommand.ValidUsersList;
 import services.observer.Subject;
-
-import java.util.List;
 
 public class HandlerCreateNewUser extends Subject implements HandlerUser {
     private HandlerUser next;
@@ -16,7 +15,8 @@ public class HandlerCreateNewUser extends Subject implements HandlerUser {
 
     @Override
     public boolean doHandle(RequestUser requestUser) {
-        List<Song> =
+        ValidUsersList.getInstance().getValidUsers().add(new User(requestUser.getUsername(), requestUser.getPassword()));
+        return true;
     }
 
     @Override

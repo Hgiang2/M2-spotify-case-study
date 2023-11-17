@@ -6,30 +6,32 @@ import java.util.List;
 
 public class Song {
     private String name;
-    private Artist artist;
-    private Genre genre;
+    private String artist;
+    private List<String> genre;
     private long time;
     private String date;
     private boolean isStream;
+    private String musicPath;
 
-    public Song(String name, String artist) {
+//    public Song(String name, String artist, String musicPath) {
+//        this.name = name;
+//        this.artist = new Artist(artist);
+//        this.time = System.currentTimeMillis();
+//        this.date = Constants.FORMAT_DATE.formatDate();
+//        this.isStream = false;
+//        services.AllSongsList.getInstance().getAllSongs().add(this);
+//    }
+
+    public Song(String name, String artist, String genre, String musicPath) {
         this.name = name;
-        this.artist = new Artist(artist);
-        this.genre = new Genre("No genre");
+        this.artist = artist;
+        // add genre input regex
+        this.genre = List.of(genre.split(", "));
         this.time = System.currentTimeMillis();
         this.date = Constants.FORMAT_DATE.formatDate();
         this.isStream = false;
-        AllSongsList.getInstance().getAllSongs().add(this);
-    }
-
-    public Song(String name, String artist, String genre) {
-        this.name = name;
-        this.artist = new Artist(artist);
-        this.genre = new Genre(genre);
-        this.time = System.currentTimeMillis();
-        this.date = Constants.FORMAT_DATE.formatDate();
-        this.isStream = false;
-        AllSongsList.getInstance().getAllSongs().add(this);
+        this.musicPath = musicPath;
+//        services.AllSpotifySongList.getInstance().getSpotifySongs().add(this);
    }
 
     public String getName() {
@@ -40,7 +42,7 @@ public class Song {
         this.name = name;
     }
 
-    public Artist getArtist() {
+    public String getArtist() {
         return artist;
     }
 
@@ -53,15 +55,11 @@ public class Song {
     }
 
     public void setArtist(String artist) {
-        this.artist = new Artist(artist);
+        this.artist = artist;
     }
 
     public List<String> getGenre() {
-        return this.genre.getGenres();
-    }
-
-    public void setGenre(String genre) {
-        this.genre.setGenres(genre);
+        return this.genre;
     }
 
     public long getTime() {
@@ -70,6 +68,10 @@ public class Song {
 
     public String getDate() {
         return date;
+    }
+
+    public String getMusicPath() {
+        return musicPath;
     }
 
     @Override

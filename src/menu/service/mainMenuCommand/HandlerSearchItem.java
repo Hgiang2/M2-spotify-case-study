@@ -1,8 +1,8 @@
 package menu.service.mainMenuCommand;
 
-import menu.service.mainMenuCommand.searchNewMusic.SearchResult;
+import menu.service.mainMenuCommand.searchNewMusic.SearchNewMusicResult;
 
 public interface HandlerSearchItem {
-    boolean doHandle(SearchResult searchResult);
-    void handle(SearchResult searchResult);
+    boolean doHandle(SearchNewMusicResult searchResult);
+    void handle(SearchNewMusicResult searchResult);
 }

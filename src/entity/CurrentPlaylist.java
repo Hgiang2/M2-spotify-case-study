@@ -1,12 +1,14 @@
 package entity;
 
+import services.AllPlaylistsListManagement;
+
 import java.util.List;
 
 public class CurrentPlaylist {
     private List<Playlist> playlistList;
     private Playlist currentPlaylist;
     private CurrentPlaylist() {
-        playlistList = AllPlaylistsList.getInstance().getAllPlaylists();
+        playlistList = AllPlaylistsListManagement.getInstance().getAllPlaylists();
     }
     private static CurrentPlaylist instance;
     public static CurrentPlaylist getInstance() {
