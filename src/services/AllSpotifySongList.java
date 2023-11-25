@@ -41,32 +41,7 @@ public class AllSpotifySongList implements AllSongListManagement, Searchable, Ob
     }
 
     @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
+    public void addSongs(List<Song> song) {
 
     }
 
@@ -76,17 +51,12 @@ public class AllSpotifySongList implements AllSongListManagement, Searchable, Ob
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
+    public void addMultipleToFavorites(int[] choice) {
 
     }
 
     @Override
     public void addToPlaylists(Song song) {
-
-    }
-
-    @Override
-    public void addMultipleToPlaylists(String choice) {
 
     }
 

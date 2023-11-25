@@ -2,7 +2,6 @@ package services;
 
 import com.google.gson.reflect.TypeToken;
 import constant.Constants;
-import entity.Favorites;
 import entity.Playlist;
 import services.observer.Observer;
 
@@ -12,15 +11,17 @@ import java.util.Collections;
 import java.util.List;
 
 public class AllPlaylistsListManagement implements Searchable, Observer {
-    private List<Playlist> allPlaylists = new ArrayList<>();
+    private List<Playlist> allPlaylists;
     private static AllPlaylistsListManagement instance;
 
     private AllPlaylistsListManagement() {
-        Type playlistType = new TypeToken<List<Playlist>>() {
-        }.getType();
-        allPlaylists.add(Favorites.getInstance());
-        Constants.fileHandler.saveToFile(Constants.ALL_PLAYLIST_FILE_PATH, allPlaylists);
-        allPlaylists = (ArrayList<Playlist>) Constants.fileHandler.readFromFile(Constants.ALL_PLAYLIST_FILE_PATH, playlistType);
+        try {
+            Type playlistType = new TypeToken<List<Playlist>>() {
+            }.getType();
+            allPlaylists = (ArrayList<Playlist>) Constants.fileHandler.readFromFile(Constants.ALL_PLAYLIST_FILE_PATH, playlistType);
+        } catch (NullPointerException e) {
+            allPlaylists = new ArrayList<>();
+        }
     }
 
     public static AllPlaylistsListManagement getInstance() {
@@ -33,7 +34,6 @@ public class AllPlaylistsListManagement implements Searchable, Observer {
     public List<Playlist> getAllPlaylists() {
         return allPlaylists;
     }
-
 
     public List<Playlist> search(String name) {
         List<Playlist> playlistsResult = new ArrayList<>();
@@ -65,9 +65,9 @@ public class AllPlaylistsListManagement implements Searchable, Observer {
 
     @Override
     public void update() {
-        for (Playlist playlist : allPlaylists) {
-            if (new SongInPlaylistManagement(playlist).getSongs().isEmpty()) allPlaylists.remove(playlist);
-        }
+//        for (Playlist playlist : allPlaylists) {
+//            if (new SongInPlaylistManagement(playlist).getSongs().isEmpty()) allPlaylists.remove(playlist);
+//        }
         Constants.fileHandler.saveToFile(Constants.ALL_PLAYLIST_FILE_PATH, allPlaylists);
     }
 }

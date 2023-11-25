@@ -13,6 +13,6 @@ public class ValidateMultipleChoiceFormat implements Validator{
 
     @Override
     public boolean isCheck() {
-        return Pattern.compile(Constants.MULTIPLE_CHOICE_REGEX).matcher(choice).find();
+        return Pattern.compile(Constants.MULTIPLE_CHOICE_REGEX).matcher(choice).matches();
     }
 }

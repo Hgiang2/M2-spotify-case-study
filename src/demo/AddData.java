@@ -2,12 +2,11 @@ package demo;
 
 import constant.Constants;
 import entity.Song;
-import services.observer.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddData extends Subject {
+public class AddData {
     public static void main(String[] args) {
         List<Song> spotifySongs = new ArrayList<>();
         Song songCruelSummer = new Song("Cruel Summer", "Taylor Swift", "Pop", "audio/CruelSummer_TaylorSwift.wav");
@@ -51,50 +50,16 @@ public class AddData extends Subject {
         spotifySongs.add(songIWantItThatWay);
         spotifySongs.add(songFearLess);
         Constants.fileHandler.saveToFile(Constants.SPOTIFY_SONG_FILE_PATH, spotifySongs);
-        List<Song> allSongs = new ArrayList<>();
-        allSongs.add(songEverytime);
-        allSongs.add(songOneLastTime);
-        allSongs.add(songRed);
-        allSongs.add(songFearLess);
-        allSongs.add(songIWantItThatWay);
-        allSongs.add(songPayphone);
-        Constants.fileHandler.saveToFile(Constants.ALL_SONG_FILE_PATH, allSongs);
-//////        Type songType = new TypeToken<List<Song>>() {}.getType();
-//////        List<Song> allSongsRead = (ArrayList<Song>) fileHandler.readFromFile(Constants.ALL_SONG_FILE_PATH, songType);
-//////        for (Song song : allSongsRead) {
-//////            System.out.println(song.toString());
-//////        }
-//        List<User> validUsers = ValidUsersList.getInstance().getValidUsers();
-//        User user1 = new User("Giang", "Giang12345@");
-//        User user2 = new User("Dao", "Dao12345@");
-//        User user3 = new User("Huy", "Huy12345@");
-//        validUsers.add(user1);
-//        validUsers.add(user2);
-//        validUsers.add(user3);
-////        Constants.fileHandler.saveToFile(Constants.VALID_USER_FILE_PATH,validUsers);
-//        Type userType = new TypeToken<List<User>>() {}.getType();
-//        ValidUsersList.getInstance().update();
-
-//        DisplayList.displayList(allSongs);
+//        List<Song> allSongs = new ArrayList<>();
+//        allSongs.add(songEverytime);
+//        allSongs.add(songOneLastTime);
+//        allSongs.add(songRed);
+//        allSongs.add(songFearLess);
+//        allSongs.add(songIWantItThatWay);
+//        allSongs.add(songPayphone);
+//        Constants.fileHandler.saveToFile(Constants.ALL_SONG_FILE_PATH, allSongs);
 //
-//        System.out.println();
-//        System.out.println("SortAZ");
-//        songManagement.sortAZ();
-//        DisplayList.displayList(allSongs);
-//
-//        System.out.println();
-//        System.out.println("SortZA");
-//        songManagement.sortZA();
-//        DisplayList.displayList(allSongs);
-//
-//        System.out.println();
-//        System.out.println("Sort by Oldest");
-//        songManagement.sortByOldest();
-//        DisplayList.displayList(allSongs);
-//
-//        System.out.println();
-//        System.out.println("Sort by Newest");
-//        songManagement.sortByNewest();
-//        DisplayList.displayList(allSongs);
+//        CreateInstance createInstance = new CreateInstance();
+//        createInstance.execute();
     }
 }

@@ -1,37 +1,42 @@
 package services;
 
 import constant.Constants;
+import entity.Artist;
 import entity.Favorites;
 import entity.Song;
 import services.observer.Observer;
 import services.validator.ValidateCheckSongExistInList;
 import services.validator.Validator;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LocalArtistSongManagement implements LocalSongListManagement, Observer {
-    private List<Song> localSongs;
-    private String name;
+public class LocalArtistSongManagement implements LocalSongListManagement, Sortable, Observer {
+    private List<Song> localSongs = new ArrayList<>();
+    private Artist artist;
 
     public LocalArtistSongManagement() {
     }
 
-    public LocalArtistSongManagement(String name) {
-        this.name = name;
-        generateLocalSongs();
+    public LocalArtistSongManagement(Artist artist) {
+        this.artist = artist;
     }
 
     private void generateLocalSongs() {
-        try {
-            localSongs.clear();
-            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-                if (song.getArtist().equals(name)) localSongs.add(song);
-            }
-        } catch (NullPointerException e) {
-            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-                if (song.getArtist().equals(name)) localSongs.add(song);
-            }
+//        try {
+//            localSongs.clear();
+//            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+//                if (song.getArtist().equals(name)) localSongs.add(song);
+//            }
+//        } catch (NullPointerException e) {
+//            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+//                if (song.getArtist().equals(name)) localSongs.add(song);
+//            }
+//        }
+        localSongs = new ArrayList<>();
+        for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+            if (song.getArtist().getUsername().equals(artist.getUsername())) localSongs.add(song);
         }
     }
 
@@ -41,37 +46,7 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Obser
     }
 
     public String getTitle() {
-        return name;
-    }
-
-    @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
-
+        return artist.getUsername();
     }
 
     @Override
@@ -80,13 +55,17 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Obser
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
-        String[] choices = choice.split(" ");
-        for (String number : choices) {
-            Song thisSong = localSongs.get(Integer.parseInt(number));
+    public void addMultipleToFavorites(int[] choice) {
+//        String[] choices = choice.split(" ");
+        for (int number : choice) {
+            Song thisSong = localSongs.get(number);
             Validator validate = new ValidateCheckSongExistInList(thisSong, Favorites.getInstance().getSongsInPlaylist());
             if (!validate.isCheck()) this.addToFavorites(thisSong);
         }
+    }
+    @Override
+    public void addSongs(List<Song> song) {
+
     }
 
     @Override
@@ -95,13 +74,10 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Obser
     }
 
     @Override
-    public void addMultipleToPlaylists(String choice) {
-
-    }
-    @Override
     public void removeMultiple(String choice) {
 
     }
+
     @Override
     public void sortAZ() {
         localSongs.sort(Constants.SORT_SONG_BY_NAME);
@@ -127,4 +103,5 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Obser
     public void update() {
         generateLocalSongs();
     }
+
 }

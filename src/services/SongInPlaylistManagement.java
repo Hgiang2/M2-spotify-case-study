@@ -1,17 +1,23 @@
 package services;
 
 import constant.Constants;
+import entity.Favorites;
 import entity.Playlist;
 import entity.Song;
 import services.observer.Observer;
 import services.observer.Subject;
+import services.validator.ValidateCheckSongExistInList;
+import services.validator.Validator;
 
 import java.util.Collections;
 import java.util.List;
 
-public class SongInPlaylistManagement extends Subject implements PlaylistSongManagement, Observer {
+public class SongInPlaylistManagement extends Subject implements AllSongListManagement, Sortable, Observer {
     private Playlist playlist;
     private List<Song> songsInPlaylist;
+
+    public SongInPlaylistManagement() {
+    }
 
     public SongInPlaylistManagement(Playlist playlist) {
         this.playlist = playlist;
@@ -29,43 +35,19 @@ public class SongInPlaylistManagement extends Subject implements PlaylistSongMan
     }
 
     @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
-
-    }
-    @Override
-    public void addNewSong() {
-
-    }
-    @Override
-    public void addLocalSong() {
-        Observer observerPlaylist = new SongInPlaylistManagement(playlist);
-        addObserver(observerPlaylist);
-
+    public void addSongs(List<Song> selectedSong) {
+        Observer observeAllPlaylists = AllPlaylistsListManagement.getInstance();
+        Observer observeAllSongs = AllSongsListManagement.getInstance();
+        addObserver(this);
+        addObserver(observeAllPlaylists);
+        addObserver(observeAllSongs);
+        for (int i = 0; i < selectedSong.size(); i++) {
+            Validator validator = new ValidateCheckSongExistInList(selectedSong.get(i), songsInPlaylist);
+            if (!validator.isCheck()) {
+                songsInPlaylist.add(selectedSong.get(i));
+                selectedSong.get(i).setTime(System.currentTimeMillis());
+            }
+        }
         notifyObserver();
         removeAll();
     }
@@ -73,12 +55,19 @@ public class SongInPlaylistManagement extends Subject implements PlaylistSongMan
 
     @Override
     public void addToFavorites(Song song) {
-
+        Favorites.getInstance().getSongsInPlaylist().add(song);
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
-
+    public void addMultipleToFavorites(int[] choice) {
+        for (int number : choice) {
+            Song thisSong = songsInPlaylist.get(number);
+            Validator validate = new ValidateCheckSongExistInList(thisSong, Favorites.getInstance().getSongsInPlaylist());
+            if (!validate.isCheck()) {
+                this.addToFavorites(thisSong);
+                thisSong.setTime(System.currentTimeMillis());
+            }
+        }
     }
 
     @Override
@@ -86,41 +75,6 @@ public class SongInPlaylistManagement extends Subject implements PlaylistSongMan
 
     }
 
-    @Override
-    public void addMultipleToPlaylists(String choice) {
-
-    }
-
-//    @Override
-//    public void addNewSong(Song song) {
-//        Observer observerPlaylist = new SongInPlaylistManagement(playlist);
-//        addObserver(observerPlaylist);
-//        boolean isSameSong = false;
-//        for (Song songInPlaylist : songsInPlaylist) {
-//            if (song == songInPlaylist) {
-//                isSameSong = true;
-//                System.out.println("This song has already been added to this playlist.");
-//                break;
-//            }
-//        }
-//        if (!isSameSong) {
-//            songsInPlaylist.add(song);
-//            AllSongsListManagement.getInstance().getAllSongs().add(song);
-//        }
-//        notifyObserver();
-//        removeAll();
-//    }
-
-
-
-    @Override
-    public void removeMultiple(String choices) {
-        notifyObserver();
-        removeAll();
-
-        notifyObserver();
-        removeAll();
-    }
 
     @Override
     public void sortAZ() {
@@ -146,17 +100,17 @@ public class SongInPlaylistManagement extends Subject implements PlaylistSongMan
 
     @Override
     public void update() {
-        for (Song playlistSong : songsInPlaylist) {
-            boolean isSameSong = false;
-            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-                if (playlistSong == song) {
-                    isSameSong = true;
-                    break;
-                }
+//        for (Song playlistSong : songsInPlaylist) {
+//            Validator validator = new ValidateCheckSongExistInList(playlistSong, AllSongsListManagement.getInstance().getSongs());
+//            if (!validator.isCheck()) songsInPlaylist.remove(playlistSong);
+//        }
+        for (Playlist playlist : AllPlaylistsListManagement.getInstance().getAllPlaylists()) {
+            for (int i = 0; i < playlist.getSongsInPlaylist().size(); i++) {
+                Validator validator = new ValidateCheckSongExistInList(playlist.getSongsInPlaylist().get(i), AllSongsListManagement.getInstance().getSongs());
+                if (!validator.isCheck()) AllSongsListManagement.getInstance().getSongs().add(playlist.getSongsInPlaylist().get(i));
             }
-            if (!isSameSong) songsInPlaylist.remove(playlistSong);
         }
-        playlist.getSongsInPlaylist().clear();
-        playlist.getSongsInPlaylist().addAll(songsInPlaylist);
+//        playlist.getSongsInPlaylist().clear();
+//        playlist.getSongsInPlaylist().addAll(songsInPlaylist);
     }
 }

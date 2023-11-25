@@ -11,21 +11,6 @@ public class SongManagement implements SongSelectable {
     }
 
     @Override
-    public void stream() {
-
-    }
-
-    @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
     public void addToFavorites() {
         Favorites.getInstance().getSongsInPlaylist().add(song);
     }

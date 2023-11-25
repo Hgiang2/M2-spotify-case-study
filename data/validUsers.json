@@ -1,14 +1,7 @@
 [
   {
-    "username": "Giang",
-    "password": "Giang12345@"
-  },
-  {
-    "username": "Dao",
-    "password": "Dao12345@"
-  },
-  {
-    "username": "Huy",
-    "password": "Huy12345@"
+    "name": "Giang",
+    "password": "Giang12345@",
+    "role": "normal"
   }
 ]

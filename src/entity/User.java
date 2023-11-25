@@ -3,22 +3,25 @@ package entity;
 public class User {
     private String username;
     private String password;
-//    private static User instance;
-//
-//    public static User getInstance() {
-//        if (instance == null) {
-//            instance = new User();
-//        }
-//        return instance;
-//    }
+    private String role;
 
 
     public User() {
     }
 
+    public User(String username) {
+        this.username = username;
+    }
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public User(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
     public String getUsername() {
@@ -35,5 +38,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

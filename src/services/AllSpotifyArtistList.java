@@ -1,13 +1,14 @@
 package services;
 
+import entity.Artist;
 import entity.Song;
 import services.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllSpotifyArtistList implements MusicListManagement, Searchable, Observer {
-    private List<String> allSpotifyArtists;
+public class AllSpotifyArtistList implements Searchable, Observer {
+    private List<Artist> allSpotifyArtists;
     private static AllSpotifyArtistList instance;
 
     private AllSpotifyArtistList() {
@@ -18,8 +19,8 @@ public class AllSpotifyArtistList implements MusicListManagement, Searchable, Ob
     private void generateArtistList() {
         for (Song song : AllSpotifySongList.getInstance().getSongs()) {
             boolean isSameArtist = false;
-            for (String artist : allSpotifyArtists) {
-                if (song.getArtist().equals(artist)) {
+            for (Artist artist : allSpotifyArtists) {
+                if (song.getArtist().getUsername().equals(artist.getUsername())) {
                     isSameArtist = true;
                     break;
                 }
@@ -36,16 +37,15 @@ public class AllSpotifyArtistList implements MusicListManagement, Searchable, Ob
         return instance;
     }
 
-    @Override
-    public List<String> getList() {
+    public List<Artist> getList() {
         return allSpotifyArtists;
     }
 
     @Override
-    public List<String> search(String name) {
-        List<String> artistResult = new ArrayList<>();
-        for (String artist : allSpotifyArtists) {
-            if (artist.toLowerCase().contains(name.toLowerCase())) {
+    public List<Artist> search(String name) {
+        List<Artist> artistResult = new ArrayList<>();
+        for (Artist artist : allSpotifyArtists) {
+            if (artist.getUsername().toLowerCase().contains(name.toLowerCase())) {
                 artistResult.add(artist);
             }
         }

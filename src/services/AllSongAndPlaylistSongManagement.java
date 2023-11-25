@@ -1,5 +1,9 @@
 package services;
 
+import entity.Song;
+
+import java.util.List;
+
 public interface AllSongAndPlaylistSongManagement extends LocalSongListManagement{
-    void addNewSong();
+    void addSongs(List<Song> selectedSong);
 }

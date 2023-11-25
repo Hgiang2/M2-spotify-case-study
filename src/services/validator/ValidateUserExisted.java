@@ -1,7 +1,8 @@
 package services.validator;
 
 import entity.User;
-import menu.service.userCommand.ValidUsersList;
+import menu.features.userCommand.CurrentUser;
+import menu.features.userCommand.ValidUsersList;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class ValidateUserExisted implements Validator {
     public boolean isCheck() {
         for(User user: users) {
             if(user.getUsername().equals(username)) {
+                CurrentUser.getInstance().setRole(user.getRole());
                 return true;
             }
         }

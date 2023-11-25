@@ -1,22 +1,25 @@
 package services;
 
+import entity.Favorites;
 import entity.Song;
+import services.validator.ValidateCheckSongExistInList;
+import services.validator.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpotifyArtistSongList implements AllSongListManagement {
-    private String name;
+    private String artist;
     private List<Song> spotifySongs = new ArrayList<>();
 
-    public SpotifyArtistSongList(String name) {
-        this.name = name;
+    public SpotifyArtistSongList(String artist) {
+        this.artist = artist;
         generateSpotifySongs();
     }
 
     private void generateSpotifySongs() {
         for (Song song : AllSpotifySongList.getInstance().getSongs()) {
-            if (song.getArtist().equals(name)) spotifySongs.add(song);
+            if (song.getArtist().getUsername().equals(artist)) spotifySongs.add(song);
         }
     }
 
@@ -27,56 +30,32 @@ public class SpotifyArtistSongList implements AllSongListManagement {
 
     @Override
     public String getTitle() {
-        return name;
+        return artist;
     }
 
-    @Override
-    public void play() {
-
-    }
 
     @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
+    public void addSongs(List<Song> song) {
 
     }
 
     @Override
     public void addToFavorites(Song song) {
-
+        Favorites.getInstance().getSongsInPlaylist().add(song);
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
-
+    public void addMultipleToFavorites(int[] choice) {
+//        String[] choices = choice.split(" ");
+        for (int number : choice) {
+            Song thisSong = spotifySongs.get(number);
+            Validator validate = new ValidateCheckSongExistInList(thisSong, Favorites.getInstance().getSongsInPlaylist());
+            if (!validate.isCheck()) this.addToFavorites(thisSong);
+        }
     }
 
     @Override
     public void addToPlaylists(Song song) {
-
-    }
-
-    @Override
-    public void addMultipleToPlaylists(String choice) {
 
     }
 }

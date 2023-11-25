@@ -6,13 +6,15 @@ import entity.Playlist;
 import entity.Song;
 import services.observer.Observer;
 import services.observer.Subject;
+import services.validator.ValidateCheckSongExistInList;
+import services.validator.Validator;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AllSongsListManagement extends Subject implements AllSongAndPlaylistSongManagement, Searchable, Observer {
+public class AllSongsListManagement extends Subject implements AllSongAndPlaylistSongManagement, Searchable, Sortable, Observer {
     private List<Song> allSongs;
     private static AllSongsListManagement instance;
 
@@ -39,42 +41,12 @@ public class AllSongsListManagement extends Subject implements AllSongAndPlaylis
     }
 
     @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
-
-    }
-
-    @Override
     public void addToFavorites(Song song) {
 
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
+    public void addMultipleToFavorites(int[] choice) {
 
     }
 
@@ -84,12 +56,7 @@ public class AllSongsListManagement extends Subject implements AllSongAndPlaylis
     }
 
     @Override
-    public void addMultipleToPlaylists(String choice) {
-
-    }
-
-    @Override
-    public void addNewSong() {
+    public void addSongs(List<Song> selectedSong) {
 
     }
 
@@ -97,55 +64,12 @@ public class AllSongsListManagement extends Subject implements AllSongAndPlaylis
     public String getTitle() {
         return "All Songs";
     }
-    //    @Override
-//    public void addNewSong(Song song) {
-//        for (String genre : AllGenreListManagement.getInstance().getAllGenresList()) {
-//            Observer observerGenre = new GenreSongListManagement(genre);
-//            addObserver(observerGenre);
-//        }
-//        for (String artist : AllArtistsListManagement.getInstance().getLocalArtists()) {
-//            Observer observerArtist = new LocalArtistSongManagement(artist);
-//            addObserver(observerArtist);
-//        }
-//        Observer observerAllGenres = AllGenreListManagement.getInstance();
-//        Observer observerAllArtists = AllArtistsListManagement.getInstance();
-//        addObserver(observerAllArtists);
-//        addObserver(observerAllGenres);
-//
-//        boolean isSameSong = false;
-//        for (Song song1 : allSongs) {
-//            if (song == song1) {
-//                isSameSong = true;
-//                System.out.println("This song is already existed.");
-//                break;
-//            }
-//        }
-//        if (!isSameSong) {
-//            allSongs.add(song);
-//        }
-//
-//        notifyObserver();
-//        removeAll();
-//    }
 
     @Override
     public void removeMultiple(String numbers) {
-        for (Playlist playlist : AllPlaylistsListManagement.getInstance().getAllPlaylists()) {
-            Observer observerPlaylist = new SongInPlaylistManagement(playlist);
-            addObserver(observerPlaylist);
-        }
-        for (String genre : AllGenreListManagement.getInstance().getList()) {
-            Observer observerGenre = new GenreSongListManagement(genre);
-            addObserver(observerGenre);
-        }
-        for (String artist : AllArtistsListManagement.getInstance().getList()) {
-            Observer observerArtist = new LocalArtistSongManagement(artist);
-            addObserver(observerArtist);
-        }
-        Observer observerAllPlaylist = AllPlaylistsListManagement.getInstance();
         Observer observerAllGenres = AllGenreListManagement.getInstance();
         Observer observerAllArtists = AllArtistsListManagement.getInstance();
-        addObserver(observerAllPlaylist);
+        addObserver(this);
         addObserver(observerAllArtists);
         addObserver(observerAllGenres);
 
@@ -193,18 +117,21 @@ public class AllSongsListManagement extends Subject implements AllSongAndPlaylis
 
     @Override
     public void update() {
-//        for (Song song : allSongs) {
-//            boolean isSameSong = false;
-//            for (Playlist playlist : AllPlaylistsListManagement.getInstance().getAllPlaylists()) {
-//                for (Song songInPlaylist : new SongInPlaylistManagement(playlist).getSongsInPlaylist()) {
-//                    if (song == songInPlaylist) {
-//                        isSameSong = true;
-//                        break;
-//                    }
-//                }
-//            }
-//            if (!isSameSong) allSongs.add
-//        }
+        Observer observeAllPlaylist = AllPlaylistsListManagement.getInstance();
+        addObserver(observeAllPlaylist);
+
+        for (Playlist playlist : AllPlaylistsListManagement.getInstance().getAllPlaylists()) {
+            Observer observePlaylistSong = new SongInPlaylistManagement(playlist);
+            addObserver(observePlaylistSong);
+            for (int i = 0; i < playlist.getSongsInPlaylist().size(); i++) {
+                Validator validator = new ValidateCheckSongExistInList(playlist.getSongsInPlaylist().get(i), allSongs);
+                if (!validator.isCheck()) playlist.getSongsInPlaylist().remove(playlist.getSongsInPlaylist().get(i));
+            }
+        }
+
+        notifyObserver();
+        removeAll();
+
         Constants.fileHandler.saveToFile(Constants.ALL_SONG_FILE_PATH, allSongs);
     }
 }

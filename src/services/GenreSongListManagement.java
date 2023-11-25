@@ -3,13 +3,19 @@ package services;
 import constant.Constants;
 import entity.Song;
 import services.observer.Observer;
+import services.validator.ValidateCheckSongExistInList;
+import services.validator.Validator;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class GenreSongListManagement implements LocalSongListManagement, Observer {
+public class GenreSongListManagement implements LocalSongListManagement, Sortable, Observer {
     private String name;
-    private List<Song> songs;
+    private List<Song> songs = new ArrayList<>();
+
+    public GenreSongListManagement() {
+    }
 
     public GenreSongListManagement(String name) {
         this.name = name;
@@ -17,18 +23,24 @@ public class GenreSongListManagement implements LocalSongListManagement, Observe
     }
 
     private void addGenreSongs() {
-        try {
-            songs.clear();
-            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-                for (String genre : song.getGenre()) {
-                    if (genre.equals(name)) songs.add(song);
-                }
-            }
-        } catch (NullPointerException e) {
-            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-                for (String genre : song.getGenre()) {
-                    if (genre.equals(name)) songs.add(song);
-                }
+//        try {
+//            songs.clear();
+//            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+//                for (String genre : song.getGenre()) {
+//                    if (genre.equals(name)) songs.add(song);
+//                }
+//            }
+//        } catch (NullPointerException e) {
+//            for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+//                for (String genre : song.getGenre()) {
+//                    if (genre.equals(name)) songs.add(song);
+//                }
+//            }
+//        }
+        songs = new ArrayList<>();
+        for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+            for (String genre : song.getGenre()) {
+                if (genre.equals(name)) songs.add(song);
             }
         }
     }
@@ -44,52 +56,22 @@ public class GenreSongListManagement implements LocalSongListManagement, Observe
     }
 
     @Override
-    public void play() {
-
-    }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void streamInOrder() {
-
-    }
-
-    @Override
-    public void streamRandomly() {
-
-    }
-
-    @Override
-    public void previous() {
-
-    }
-
-    @Override
-    public void next() {
-
-    }
-
-    @Override
     public void addToFavorites(Song song) {
 
     }
 
     @Override
-    public void addMultipleToFavorites(String choice) {
+    public void addMultipleToFavorites(int[] choice) {
+
+    }
+
+    @Override
+    public void addSongs(List<Song> song) {
 
     }
 
     @Override
     public void addToPlaylists(Song song) {
-
-    }
-
-    @Override
-    public void addMultipleToPlaylists(String choice) {
 
     }
 
@@ -122,6 +104,13 @@ public class GenreSongListManagement implements LocalSongListManagement, Observe
 
     @Override
     public void update() {
-        addGenreSongs();
+        for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+            Validator validator = new ValidateCheckSongExistInList(song, songs);
+            if (!validator.isCheck()) {
+                for (String genre : song.getGenre()) {
+                    if (genre.equals(name)) songs.add(song);
+                }
+            }
+        }
     }
 }

@@ -1,13 +1,14 @@
 package services;
 
+import entity.Artist;
 import entity.Song;
 import services.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllArtistsListManagement implements MusicListManagement, Searchable, Observer {
-    private List<String> localArtists;
+public class AllArtistsListManagement implements Searchable, Observer {
+    private List<Artist> localArtists;
     private static AllArtistsListManagement instance;
 
     private AllArtistsListManagement() {
@@ -23,33 +24,34 @@ public class AllArtistsListManagement implements MusicListManagement, Searchable
     }
 
     private void extractArtists() {
-        for (Song song : AllSongsListManagement.getInstance().getSongs()) {
+        localArtists = new ArrayList<>();
+        List<Song> allSongs = AllSongsListManagement.getInstance().getSongs();
+        for (int i = 0; i < allSongs.size(); i++) {
             boolean isSameArtist = false;
-            for (String artist : localArtists) {
-                if (song.getArtist().equals(artist)) {
+            for (int j = 0; j < localArtists.size(); j++) {
+                if (allSongs.get(i).getArtist().equals(localArtists.get(j))) {
                     isSameArtist = true;
                     break;
                 }
             }
             if (isSameArtist) continue;
-            localArtists.add(song.getArtist());
+            localArtists.add(allSongs.get(i).getArtist());
         }
-        for (String artist : localArtists) {
-            if (new LocalArtistSongManagement(artist).getSongs().isEmpty()) localArtists.remove(artist);
+        for (int i = 0; i < localArtists.size(); i++) {
+            if (new LocalArtistSongManagement(localArtists.get(i)).getSongs().isEmpty()) localArtists.remove(localArtists.get(i));
         }
     }
 
-    @Override
-    public List<String> getList() {
+    public List<Artist> getList() {
         return localArtists;
     }
 
 
     @Override
-    public List<String> search(String name) {
-        List<String> artistResult = new ArrayList<>();
-        for (String artist : localArtists) {
-            if (artist.toLowerCase().contains(name.toLowerCase())) {
+    public List<Artist> search(String name) {
+        List<Artist> artistResult = new ArrayList<>();
+        for (Artist artist : localArtists) {
+            if (artist.getUsername().toLowerCase().contains(name.toLowerCase())) {
                 artistResult.add(artist);
             }
         }

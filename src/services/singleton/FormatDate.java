@@ -2,7 +2,7 @@ package services.singleton;
 
 import constant.Constants;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class FormatDate {
@@ -18,8 +18,7 @@ public class FormatDate {
     private FormatDate() {
     }
 
-    public String formatDate() {
-        LocalDateTime date = LocalDateTime.now();
+    public String formatDate(LocalDate date) {
         DateTimeFormatter datePattern = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
         return date.format(datePattern);
     }

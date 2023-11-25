@@ -1,17 +1,20 @@
 package entity;
 
-public class Favorites extends Playlist{
+import services.AllPlaylistsListManagement;
+
+public class Favorites extends Playlist {
     private static Playlist instance;
-    public static Playlist getInstance() {
-        if (instance == null) {
-            instance = new Favorites();
-        }
-        return instance;
-    }
 
     private Favorites() {
         super("Favorites");
     }
 
-
+    public static Playlist getInstance() {
+        try {
+            instance = AllPlaylistsListManagement.getInstance().getAllPlaylists().get(0);
+        } catch (NullPointerException | IndexOutOfBoundsException e) {
+            instance = new Favorites();
+        }
+        return instance;
+    }
 }

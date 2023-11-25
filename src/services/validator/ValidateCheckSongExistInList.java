@@ -16,7 +16,7 @@ public class ValidateCheckSongExistInList implements Validator{
     @Override
     public boolean isCheck() {
         for(Song songInList : songList) {
-            if(song == songInList) {
+            if(song.toString().equals(songInList.toString())) {
                 return true;
             }
         }

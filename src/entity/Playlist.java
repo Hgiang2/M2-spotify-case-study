@@ -2,28 +2,23 @@ package entity;
 
 import constant.Constants;
 import services.AllPlaylistsListManagement;
+import services.observer.Observer;
+import services.observer.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Playlist {
-    private List<Song> songsInPlaylist;
-//    private List<Song> songsNotInPlaylist;
     private String name;
+    private List<Song> songsInPlaylist = new ArrayList<>();
     private long time;
-    private String date;
-    private boolean isStream;
-
     public Playlist() {
+        this.time = System.currentTimeMillis();
     }
 
     public Playlist(String name) {
         this.name = name;
-//        this.songsInPlaylist = new ArrayList<>();
         this.time = System.currentTimeMillis();
-        this.date= Constants.FORMAT_DATE.formatDate();
-        this.isStream = false;
-        this.songsInPlaylist = new ArrayList<>();
         AllPlaylistsListManagement.getInstance().getAllPlaylists().add(this);
     }
 
@@ -37,10 +32,6 @@ public class Playlist {
 
     public long getTime() {
         return time;
-    }
-
-    public String getDate() {
-        return date;
     }
 
     public List<Song> getSongsInPlaylist() {
@@ -57,14 +48,6 @@ public class Playlist {
 //        }
 //        return songsNotInPlaylist;
 //    }
-
-    public boolean isStream() {
-        return isStream;
-    }
-
-    public void setStream(boolean stream) {
-        isStream = stream;
-    }
 
     @Override
     public String toString() {
