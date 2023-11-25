@@ -38,7 +38,7 @@ public class MenuTabTemplate implements Menu{
     public void runMenu() {
         this.display();
         String choice = getChoice();
-        this.runCommand(Integer.parseInt(choice));
+        this.runCommand(Integer.parseInt(choice) - 1);
     }
 
     private String getChoice() {

@@ -31,18 +31,15 @@ public interface Constants {
     String NORMAL_USER = "normal";
     String PREMIUM_USER = "premium";
     String ARTIST = "artist";
-    String MANAGER = "manager";
+    String ADMIN = "admin";
     String ALL_SONG_FILE_PATH = "data/localSongs.json";
     String ALL_PLAYLIST_FILE_PATH = "data/playlist.json";
     String SPOTIFY_SONG_FILE_PATH = "data/spotifySongs.json";
     String VALID_USER_FILE_PATH = "data/validUsers.json";
+    String ALL_REQUESTS_FILE_PATH = "data/allRequests.json";
     String DATE_FORMAT = "dd/MM/yyyy";
     String EXIT = "Exit";
-    String EXIT_DESCRIPTION = """
-           Exiting...
-           Completed!
-           ------------------------
-           Do you want to re-open Spotify?""";
+    String EXIT_DESCRIPTION = "Choose an app to open.";
     String BACK = "Back";
     String RETURN_TO_MAIN = "Return to Main";
     String BLANK = "";
@@ -59,6 +56,7 @@ public interface Constants {
     String ADD_MULTIPLE_TO_PLAYLISTS = "Add Multiple to Playlists";
     String USERNAME_REGEX = "[a-zA-Z0-9]*";
     String PASSWORD_REGEX = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,}$";
+    String EMAIL_REGEX = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
     String SINGLE_CHOICE_REGEX = "\\d{1,2}";
     String MULTIPLE_CHOICE_REGEX = "\\d{1,2}|((\\d{1,2}\\s)*\\d{1,2})";
     String ALL_SONGS = "Your songs";

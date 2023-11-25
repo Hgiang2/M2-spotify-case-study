@@ -1,7 +1,10 @@
 package menu.template;
 
 import constant.Constants;
+import entity.Admin;
 import entity.Favorites;
+import entity.RequestList;
+import entity.ValidUsersList;
 import menu.features.exitCommand.CommandExit;
 import menu.features.registerArtist.CommandArtistRegister;
 import menu.features.userCommand.logInCommand.CommandLogIn;
@@ -22,10 +25,18 @@ public class NavigateMenuStart extends Subject implements Navigator {
     }
 
     private void createInstance() {
+        RequestList.getInstance();
         if (AllPlaylistsListManagement.getInstance().getAllPlaylists().isEmpty()) {
             Observer observeAllPlaylists = AllPlaylistsListManagement.getInstance();
             addObserver(observeAllPlaylists);
             Favorites.getInstance();
+            notifyObserver();
+            removeAll();
+        }
+        if (ValidUsersList.getInstance().getValidUsers().isEmpty()) {
+            Observer observeValidUsers = ValidUsersList.getInstance();
+            addObserver(observeValidUsers);
+            Admin.getInstance();
             notifyObserver();
             removeAll();
         }

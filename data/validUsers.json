@@ -1,8 +1,9 @@
 [
   {
-    "username": "Giang",
-    "password": "Giang12345@",
-    "role": "normal",
+    "requestList": [],
+    "username": "admin",
+    "password": "admin12345@",
+    "role": "admin",
     "plan": {
       "isSubscribe": false,
       "date": "25/11/2023"

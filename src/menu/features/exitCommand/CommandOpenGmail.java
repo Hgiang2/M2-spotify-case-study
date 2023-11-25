@@ -2,12 +2,13 @@ package menu.features.exitCommand;
 
 import menu.template.Command;
 import menu.template.NavigateExit;
+import menu.template.NavigateGmail;
 import menu.template.Navigator;
 
-public class CommandOpenNextTime implements Command {
+public class CommandOpenGmail implements Command {
     @Override
     public void execute() {
-        Navigator exitScreen = new NavigateExit();
-        exitScreen.navigate();
+        Navigator navigator = new NavigateGmail();
+        navigator.navigate();
     }
 }
