@@ -21,6 +21,20 @@ public class HandlerCreateNewUser extends Subject implements HandlerUser {
         ValidUsersList.getInstance().getValidUsers().add(new NormalUser(requestUser.getUsername(), requestUser.getPassword()));
         notifyObserver();
         removeAll();
+        System.out.println();
+        System.out.println("Processing");
+        System.out.println();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Create new account successfully!");
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return true;
     }
 

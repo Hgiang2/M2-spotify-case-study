@@ -20,7 +20,7 @@ public class NavigateDisplaySearchResultLocal implements Navigator{
     private void displaySearchResult() {
         Menu menuSearchResult = new MenuResultListTemplate("All Spotify Results", "All Results: ", searchResult.getSearchResult().size());
         for (Playlist playlist : searchResult.getPlaylistResult()) menuSearchResult.addMenuItem(new MenuItem(playlist.getName(), new CommandSelectPlaylist(playlist, this)));
-        for (Artist artist : searchResult.getArtistResult()) menuSearchResult.addMenuItem(new MenuItem(artist.getUsername(), new CommandSelectArtist(artist, this)));
+        for (Artist artist : searchResult.getArtistResult()) menuSearchResult.addMenuItem(new MenuItem(artist.getStageName(), new CommandSelectArtist(artist, this)));
         for (Song song : searchResult.getSongResult()) menuSearchResult.addMenuItem(new MenuItem(song.toString(), new CommandSelectLocalSong(song, this)));
         menuSearchResult.addMenuItem(new MenuItem(Constants.BACK, new CommandBack(new NavigateLocalLibrary())));
         menuSearchResult.runMenu();

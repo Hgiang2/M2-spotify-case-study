@@ -12,7 +12,7 @@ public class HandlerPlanCheckUser implements HandlerPlan {
 
     @Override
     public boolean doHandle() {
-        return CurrentUser.getInstance().getRole().equals(Constants.NORMAL_USER);
+        return CurrentUser.getInstance().getCurrentUser().getRole().equals(Constants.NORMAL_USER);
     }
 
     @Override

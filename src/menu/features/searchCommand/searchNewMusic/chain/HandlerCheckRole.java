@@ -14,7 +14,7 @@ public class HandlerCheckRole implements HandlerSearchItem {
 
     @Override
     public boolean doHandle(SearchNewMusicResult searchResult) {
-        return CurrentUser.getInstance().getRole().equals(Constants.PREMIUM_USER);
+        return CurrentUser.getInstance().getCurrentUser().getRole().equals(Constants.PREMIUM_USER);
     }
 
     @Override

@@ -21,6 +21,7 @@ public interface Constants {
     Scanner SCANNER = new Scanner(System.in);
     DisplayList DISPLAY_LIST = DisplayList.getInstance();
     FormatDate FORMAT_DATE = FormatDate.getInstance();
+    String RETURN = "Return";
     String YES = "Yes";
     String NO = "No";
     String CONTINUE = "Continue";

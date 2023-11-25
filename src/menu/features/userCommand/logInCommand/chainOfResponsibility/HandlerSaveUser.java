@@ -15,15 +15,23 @@ public class HandlerSaveUser implements HandlerUser {
     public boolean doHandle(RequestUser requestUser) {
 //        CurrentUser.getInstance().setUsername(requestUser.getUsername());
         CurrentUser.getInstance().setCurrentUser(requestUser.getUsername(), requestUser.getPassword());
+        System.out.println();
+        System.out.println("Logging in....");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         return true;
     }
 
     @Override
     public void handle(RequestUser requestUser) {
-        if(!doHandle(requestUser)){
+        if (!doHandle(requestUser)) {
             return;
         }
-        if(next != null) {
+        if (next != null) {
             next.handle(requestUser);
         }
     }

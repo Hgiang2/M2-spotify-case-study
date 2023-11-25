@@ -2,80 +2,129 @@
   {
     "name": "Cruel Summer",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop"
     ],
-    "time": 1700817515650,
+    "time": 1700897546148,
     "musicPath": "audio/CruelSummer_TaylorSwift.wav"
   },
   {
     "name": "Love Story",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Country"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/LoveStory_TaylorSwift.wav"
   },
   {
     "name": "Memories",
     "artist": {
-      "name": "Maroon 5"
+      "stageName": "Maroon 5",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Rock",
       "Soft Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/Memories_Maroon5.wav"
   },
   {
     "name": "I Knew You Were Trouble",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "EDM",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/IKnewYouWereTrouble_TaylorSwift.wav"
   },
   {
     "name": "One Thing",
     "artist": {
-      "name": "One Direction"
+      "stageName": "One Direction",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/OneThing_OneDirection.wav"
   },
   {
     "name": "Red",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Country",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/Red_TaylorSwift.wav"
   },
   {
     "name": "Enchanted",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Ballad",
@@ -83,161 +132,252 @@
       "Rock",
       "Country"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/Enchanted_TaylorSwift.wav"
   },
   {
     "name": "Payphone",
     "artist": {
-      "name": "Maroon 5"
+      "stageName": "Maroon 5",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "R\u0026B"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/Payphone_Maroon5.wav"
   },
   {
     "name": "One More Night",
     "artist": {
-      "name": "Maroon 5"
+      "stageName": "Maroon 5",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/OneMoreNight_Maroon5.wav"
   },
   {
     "name": "What Makes You Beautiful",
     "artist": {
-      "name": "One Direction"
+      "stageName": "One Direction",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/WhatMakesYouBeautiful_OneDirection.wav"
   },
   {
     "name": "7 Rings",
     "artist": {
-      "name": "Ariana Grande"
+      "stageName": "Ariana Grande",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/7Rings_ArianaGrande.wav"
   },
   {
     "name": "One Last Time",
     "artist": {
-      "name": "Ariana Grande"
+      "stageName": "Ariana Grande",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Country"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/OneLastTime_ArianaGrande.wav"
   },
   {
     "name": "Everytime",
     "artist": {
-      "name": "Ariana Grande"
+      "stageName": "Ariana Grande",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "R\u0026B"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/Everytime_ArianaGrande.wav"
   },
   {
     "name": "Santa Tell Me",
     "artist": {
-      "name": "Ariana Grande"
+      "stageName": "Ariana Grande",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Country",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546149,
     "musicPath": "audio/SantaTellMe_ArianaGrande.wav"
   },
   {
     "name": "Mean",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Rock",
       "Soft Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/Mean_TaylorSwift.wav"
   },
   {
     "name": "Fifteen",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "R\u0026B"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/Fifteen_TaylorSwift.wav"
   },
   {
     "name": "Look What You Made Me Do",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/LookWhatYouMadeMeDo_TaylorSwift.wav"
   },
   {
     "name": "As Long As You Love Me",
     "artist": {
-      "name": "Backstreet Boys"
+      "stageName": "Backstreet Boys",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Rock"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/AsLongAsYouLoveMe_BackstreetBoys.wav"
   },
   {
     "name": "I Want It That Way",
     "artist": {
-      "name": "Backstreet Boys"
+      "stageName": "Backstreet Boys",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/IWantItThatWay_BackstreetBoys.wav"
   },
   {
     "name": "Fearless",
     "artist": {
-      "name": "Taylor Swift"
+      "stageName": "Taylor Swift",
+      "username": "",
+      "password": "",
+      "role": "artist",
+      "plan": {
+        "isSubscribe": false,
+        "date": "25/11/2023"
+      }
     },
     "genre": [
       "Pop",
       "Country"
     ],
-    "time": 1700817515650,
+    "time": 1700897546150,
     "musicPath": "audio/Fearless_TaylorSwift.wav"
   }
 ]

@@ -6,7 +6,7 @@ import menu.features.exitCommand.CommandBack;
 
 public class NavigateCheckPlanNormal implements Navigator{
     private void displayCheckPlanNormal() {
-        Menu menu = new MenuTemplate("Normal Plan", "You are currently a free user. DO you want to subscribe to Premium Plan?");
+        Menu menu = new MenuTabTemplate("Normal Plan", "You are currently a free user. Do you want to subscribe to Premium Plan?");
         menu.addMenuItem(new MenuItem(Constants.YES, new CommandNavigatePremiumCost()));
         menu.addMenuItem(new MenuItem(Constants.NO, new CommandBack(new NavigateMenuNormalMain())));
         menu.runMenu();

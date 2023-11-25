@@ -2,10 +2,11 @@ package entity;
 
 import java.util.List;
 
-public class CurrentUser extends User {
+public class CurrentUser {
     private List<User> users;
     private User currentUser;
     private CurrentUser() {
+        super();
         users = ValidUsersList.getInstance().getValidUsers();
     }
     private static CurrentUser instance;

@@ -19,8 +19,9 @@ public class AllSpotifyArtistList implements Searchable, Observer {
     private void generateArtistList() {
         for (Song song : AllSpotifySongList.getInstance().getSongs()) {
             boolean isSameArtist = false;
+
             for (Artist artist : allSpotifyArtists) {
-                if (song.getArtist().getUsername().equals(artist.getUsername())) {
+                if (song.getArtist().getStageName().equals(artist.getStageName())) {
                     isSameArtist = true;
                     break;
                 }
@@ -45,7 +46,7 @@ public class AllSpotifyArtistList implements Searchable, Observer {
     public List<Artist> search(String name) {
         List<Artist> artistResult = new ArrayList<>();
         for (Artist artist : allSpotifyArtists) {
-            if (artist.getUsername().toLowerCase().contains(name.toLowerCase())) {
+            if (artist.getStageName().toLowerCase().contains(name.toLowerCase())) {
                 artistResult.add(artist);
             }
         }

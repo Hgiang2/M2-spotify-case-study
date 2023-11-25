@@ -18,8 +18,8 @@ public class NavigateSelectNormalSpotifyArtist implements Navigator {
     }
 
     private void displayNormalArtistSelect() {
-        AllSongListManagement thisArtistSongs = new SpotifyArtistSongList(artist.getUsername());
-        Menu menuArtist = new MenuResultListTemplate(artist.getUsername(), artist.getUsername(), thisArtistSongs.getSongs().size());
+        AllSongListManagement thisArtistSongs = new SpotifyArtistSongList(artist.getStageName());
+        Menu menuArtist = new MenuResultListTemplate(artist.getStageName(), artist.getStageName(), thisArtistSongs.getSongs().size());
         for (int i = 0; i < thisArtistSongs.getSongs().size(); i++) menuArtist.addMenuItem(new MenuItem(thisArtistSongs.getSongs().get(i).toString(), new CommandStreamSong(i, thisArtistSongs, this)));
         menuArtist.addMenuItem(new MenuItem(Constants.BACK, new CommandBack(navigateBack)));
         menuArtist.addMenuItem(new MenuItem(Constants.STREAM_LIST, new CommandStreamListOrderly(thisArtistSongs, this)));

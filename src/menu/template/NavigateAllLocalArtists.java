@@ -13,7 +13,7 @@ public class NavigateAllLocalArtists implements Navigator {
         List<Artist> artist = AllArtistsListManagement.getInstance().getList();
         Menu menu = new MenuResultListTemplate(Constants.ALL_ARTISTS, Constants.ALL_ARTISTS, artist.size());
         for (int i = 0; i < artist.size(); i++) {
-            menu.addMenuItem(new MenuItem(artist.get(i).getUsername(), new CommandSelectArtist(artist.get(i), this)));
+            menu.addMenuItem(new MenuItem(artist.get(i).getStageName(), new CommandSelectArtist(artist.get(i), this)));
         }
         menu.addMenuItem(new MenuItem(Constants.BACK, new CommandBack(new NavigateLocalLibrary())));
         menu.addMenuItem(new MenuItem(Constants.RETURN_TO_MAIN, Constants.BACK_TO_MAIN));

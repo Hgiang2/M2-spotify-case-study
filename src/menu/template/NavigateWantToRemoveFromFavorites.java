@@ -14,7 +14,7 @@ public class NavigateWantToRemoveFromFavorites implements Navigator{
     }
 
     private void displayWantToRemoveFromFavorites() {
-        Menu menu = new MenuTemplate("Remove from Favorites", "Do you want to remove " + song.getName() + " - " + song.getArtist() + " from Favorites?");
+        Menu menu = new MenuTabTemplate("Remove from Favorites", "Do you want to remove " + song.getName() + " - " + song.getArtist() + " from Favorites?");
         menu.addMenuItem(new MenuItem("Yes", new CommandRemoveFromFavorites(song, navigateBack)));
         menu.addMenuItem(new MenuItem("No", new CommandBack(navigateBack)));
         menu.runMenu();

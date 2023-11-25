@@ -6,7 +6,7 @@ import menu.features.exitCommand.CommandBack;
 
 public class NavigateUpgradeCost implements Navigator{
     private void displayCost() {
-        Menu menu = new MenuInputTemplate("Cost", "The Premium Plan is " + Constants.PRICE_MONTHLY + "VND per month. Wanna continue?");
+        Menu menu = new MenuTabTemplate("Cost", "The Premium Plan is " + Constants.PRICE_MONTHLY + "VND per month. Wanna continue?");
         menu.addMenuItem(new MenuItem(Constants.CONTINUE, new CommandContinuePayment()));
         menu.addMenuItem(new MenuItem(Constants.CANCEL, new CommandBack(new NavigateCheckPlanNormal())));
         menu.runMenu();

@@ -27,9 +27,10 @@ public class MenuTabTemplate implements Menu{
 
     @Override
     public void display() {
+        System.out.println();
         System.out.println(description);
         for (int i = 0; i < menuItems.size(); i++) {
-            System.out.print(i + ". " + menuItems.get(i).getName() + "\t");
+            System.out.print("[" + (i + 1) + "] " + menuItems.get(i).getName() + "\t");
         }
     }
 

@@ -1,5 +1,6 @@
 package menu.features.checkPlan;
 
+import menu.template.NavigateCheckPlanPremium;
 import menu.template.Navigator;
 
 public class HandlerPlanNavigateCheckPlanPremium implements HandlerPlan {

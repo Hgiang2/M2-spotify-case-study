@@ -1,7 +1,11 @@
 [
   {
-    "name": "Giang",
+    "username": "Giang",
     "password": "Giang12345@",
-    "role": "normal"
+    "role": "normal",
+    "plan": {
+      "isSubscribe": false,
+      "date": "25/11/2023"
+    }
   }
 ]

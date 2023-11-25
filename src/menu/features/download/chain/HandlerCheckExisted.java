@@ -28,6 +28,12 @@ public class HandlerCheckExisted extends Subject implements HandleChooseMultiple
                 song.setTime(System.currentTimeMillis());
             }
         }
+        System.out.println("Downloading");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("Download to local library successfully!");
         notifyObserver();
         removeAll();

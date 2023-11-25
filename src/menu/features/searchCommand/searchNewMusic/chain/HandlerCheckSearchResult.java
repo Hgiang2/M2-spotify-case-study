@@ -19,6 +19,13 @@ public class HandlerCheckSearchResult implements HandlerSearchItem {
 
     @Override
     public void handle(SearchNewMusicResult searchResult) {
+        System.out.println();
+        System.out.println("Searching...");
+        try {
+            Thread.sleep(700);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (!doHandle(searchResult)) {
             Navigator navigatorNotFound = new NavigateNoItemFound();
             navigatorNotFound.navigate();

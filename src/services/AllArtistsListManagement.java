@@ -51,7 +51,7 @@ public class AllArtistsListManagement implements Searchable, Observer {
     public List<Artist> search(String name) {
         List<Artist> artistResult = new ArrayList<>();
         for (Artist artist : localArtists) {
-            if (artist.getUsername().toLowerCase().contains(name.toLowerCase())) {
+            if (artist.getStageName().toLowerCase().contains(name.toLowerCase())) {
                 artistResult.add(artist);
             }
         }

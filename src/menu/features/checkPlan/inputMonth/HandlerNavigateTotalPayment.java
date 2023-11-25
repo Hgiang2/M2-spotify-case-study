@@ -1,8 +1,10 @@
 package menu.features.checkPlan.inputMonth;
 
+import menu.template.Command;
+import menu.template.NavigateTotalPayment;
 import menu.template.Navigator;
 
-public class HandlerNavigateTotalPayment implements HandlerInputMonth{
+public class HandlerNavigateTotalPayment implements HandlerInputMonth {
     private HandlerInputMonth next;
 
     public HandlerNavigateTotalPayment(HandlerInputMonth next) {
@@ -12,6 +14,11 @@ public class HandlerNavigateTotalPayment implements HandlerInputMonth{
     @Override
     public boolean doHandle(String months) {
         int monthCount = Integer.parseInt(months);
+        if (monthCount < 1 || monthCount > 12) {
+            System.out.println("Out of bounds! Month must be between 1 & 12");
+            Command inputMonth = new CommandInputMonthProcess();
+            inputMonth.execute();
+        }
         Navigator navigator = new NavigateTotalPayment(monthCount);
         navigator.navigate();
         return true;
@@ -19,7 +26,11 @@ public class HandlerNavigateTotalPayment implements HandlerInputMonth{
 
     @Override
     public void handle(String months) {
-        if (!doHandle(months)) return;
-        if (next != null) next.handle(months);
+        while (!doHandle(months)) {
+            return;
+        }
+        if (next != null) {
+            next.handle(months);
+        }
     }
 }

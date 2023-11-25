@@ -12,7 +12,7 @@ public class NavigateConfirmDeleteMultiple implements Navigator{
     }
 
     private void displayConfirmDeleteMultiple() {
-        Menu menu = new MenuTemplate("Confirm Delete Multiple", "Do you want to delete these songs permanently?");
+        Menu menu = new MenuTabTemplate("Confirm Delete Multiple", "Do you want to delete these songs permanently?");
         menu.addMenuItem(new MenuItem("Yes", new CommandDeleteMultipleConfirm(selectedItems)));
         menu.addMenuItem(new MenuItem("No", new CommandBack(new NavigateAllSongs())));
         menu.runMenu();

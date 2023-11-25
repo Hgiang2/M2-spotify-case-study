@@ -47,7 +47,7 @@ public class MusicPlayer extends JFrame implements ActionListener, Observer {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
 
-        filePathField = new JTextField(20);
+        filePathField = new JTextField(15);
         previousButton = new JButton("<");
         playButton = new JButton("Play");
         nextButton = new JButton(">");
@@ -67,7 +67,7 @@ public class MusicPlayer extends JFrame implements ActionListener, Observer {
         add(randomButton);
         add(loopButton);
 
-        setSize(220, 180);
+        setSize(220, 150);
         setLocationRelativeTo(null);
         setVisible(true);
 

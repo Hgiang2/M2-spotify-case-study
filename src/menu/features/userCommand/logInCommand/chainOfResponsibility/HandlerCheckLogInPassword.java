@@ -36,6 +36,13 @@ public class HandlerCheckLogInPassword implements HandlerUser {
             if (wrongPasswordCount == Constants.MAX_WRONG_ATTEMPT) {
                 System.out.println("You've entered incorrect password more than " + wrongPasswordCount + " times.");
                 System.out.println();
+                System.out.println("Waiting time: 5 seconds");
+                System.out.println();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 System.out.println("Exit to Start.......");
                 wrongPasswordCount = 0;
                 Constants.BACK_TO_START.execute();

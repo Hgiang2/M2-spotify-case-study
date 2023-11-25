@@ -32,6 +32,11 @@ public class MenuInputTemplate implements Menu {
 
     @Override
     public void runMenu() {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         this.display();
     }
 

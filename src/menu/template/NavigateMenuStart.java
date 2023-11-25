@@ -3,6 +3,7 @@ package menu.template;
 import constant.Constants;
 import entity.Favorites;
 import menu.features.exitCommand.CommandExit;
+import menu.features.registerArtist.CommandArtistRegister;
 import menu.features.userCommand.logInCommand.CommandLogIn;
 import menu.features.userCommand.signInCommand.CommandSignIn;
 import services.AllPlaylistsListManagement;
@@ -16,6 +17,7 @@ public class NavigateMenuStart extends Subject implements Navigator {
         menuStart.addMenuItem(new MenuItem(Constants.EXIT, new CommandExit()));
         menuStart.addMenuItem(new MenuItem("New to Spotify", new CommandSignIn()));
         menuStart.addMenuItem(new MenuItem("An existed user", new CommandLogIn()));
+        menuStart.addMenuItem(new MenuItem("Register as artist", new CommandArtistRegister()));
         menuStart.runMenu();
     }
 

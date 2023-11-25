@@ -36,7 +36,7 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Sorta
 //        }
         localSongs = new ArrayList<>();
         for (Song song : AllSongsListManagement.getInstance().getSongs()) {
-            if (song.getArtist().getUsername().equals(artist.getUsername())) localSongs.add(song);
+            if (song.getArtist().getStageName().equals(artist.getStageName())) localSongs.add(song);
         }
     }
 
@@ -46,7 +46,7 @@ public class LocalArtistSongManagement implements LocalSongListManagement, Sorta
     }
 
     public String getTitle() {
-        return artist.getUsername();
+        return artist.getStageName();
     }
 
     @Override

@@ -19,7 +19,7 @@ public class SpotifyArtistSongList implements AllSongListManagement {
 
     private void generateSpotifySongs() {
         for (Song song : AllSpotifySongList.getInstance().getSongs()) {
-            if (song.getArtist().getUsername().equals(artist)) spotifySongs.add(song);
+            if (song.getArtist().getStageName().equals(artist)) spotifySongs.add(song);
         }
     }
 

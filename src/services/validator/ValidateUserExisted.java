@@ -4,6 +4,7 @@ import entity.User;
 import entity.CurrentUser;
 import entity.ValidUsersList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ValidateUserExisted implements Validator {
@@ -11,16 +12,18 @@ public class ValidateUserExisted implements Validator {
     private String username;
 
     public ValidateUserExisted(String username) {
-        this.users = ValidUsersList.getInstance().getValidUsers();
         this.username = username;
+        this.users = ValidUsersList.getInstance().getValidUsers();
     }
 
     @Override
     public boolean isCheck() {
-        for(User user: users) {
-            if(user.getUsername().equals(username)) {
-                CurrentUser.getInstance().setRole(user.getRole());
-                return true;
+        if (users != null) {
+            for (User user : users) {
+                if (user.getUsername().equals(username)) {
+//                    CurrentUser.getInstance().getCurrentUser().setRole(user.getRole());
+                    return true;
+                }
             }
         }
         return false;

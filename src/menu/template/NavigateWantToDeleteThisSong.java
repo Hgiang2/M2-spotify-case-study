@@ -14,7 +14,7 @@ public class NavigateWantToDeleteThisSong implements Navigator {
     }
 
     private void displayDeleteSongMenu() {
-        Menu menu = new MenuTemplate("Delete song", "Do you want to delete this song permanently?");
+        Menu menu = new MenuTabTemplate("Delete song", "Do you want to delete this song permanently?");
         menu.addMenuItem(new MenuItem("Yes", new CommandDeleteLocalSongProcess(song)));
         menu.addMenuItem(new MenuItem("No", new CommandBack(navigateBack)));
         menu.runMenu();

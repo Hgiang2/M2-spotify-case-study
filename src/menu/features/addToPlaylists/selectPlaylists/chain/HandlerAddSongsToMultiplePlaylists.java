@@ -21,6 +21,11 @@ public class HandlerAddSongsToMultiplePlaylists implements HandleChooseMultipleI
         for (Playlist playlist : selectedPlaylists) {
             new SongInPlaylistManagement(playlist).addSongs(selectedItems.getSelectedSong());
         }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (selectedItems.getSelectedSong().size() == 1) {
             if (selectedPlaylists.size() == 1) System.out.println(selectedItems.getSelectedSong().get(0).toString() + " added to " + selectedPlaylists.get(0).getName() + " successfully!");
             else System.out.println(selectedItems.getSelectedSong().get(0).toString() + " added to Multiple Playlists successfully!");

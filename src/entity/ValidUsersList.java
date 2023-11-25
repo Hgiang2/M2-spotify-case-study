@@ -10,14 +10,17 @@ import java.util.List;
 
 
 public class ValidUsersList implements Observer {
-    private List<User> validUsers = new ArrayList<>();
+    private List<User> validUsers;
     private static ValidUsersList instance;
 
     private ValidUsersList() {
-
-        Type userType = new TypeToken<List<User>>() {}.getType();
-        validUsers = (ArrayList<User>) Constants.fileHandler.readFromFile(Constants.VALID_USER_FILE_PATH, userType);
-//        validUsers = new ArrayList<>();
+        Type userType = new TypeToken<List<User>>() {
+        }.getType();
+        try {
+            validUsers = (ArrayList<User>) Constants.fileHandler.readFromFile(Constants.VALID_USER_FILE_PATH, userType);
+        } catch (Exception e) {
+            validUsers = new ArrayList<>();
+        }
     }
 
     public static ValidUsersList getInstance() {
@@ -34,7 +37,5 @@ public class ValidUsersList implements Observer {
     @Override
     public void update() {
         Constants.fileHandler.saveToFile(Constants.VALID_USER_FILE_PATH, validUsers);
-        System.out.println();
-        System.out.println("Create new account successfully!");
     }
 }

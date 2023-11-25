@@ -16,7 +16,7 @@ public class CommandSelectSpotifyArtist implements Command {
 
     @Override
     public void execute() {
-        Navigator navigator = new NavigateSelectSpotifyArtist(artist.getUsername(), navigateBack);
+        Navigator navigator = new NavigateSelectSpotifyArtist(artist.getStageName(), navigateBack);
         navigator.navigate();
     }
 }
