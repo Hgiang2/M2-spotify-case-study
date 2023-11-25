@@ -3,7 +3,7 @@ package menu.features.userCommand.signInCommand.chainOfResponsibility;
 import entity.NormalUser;
 import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.RequestUser;
-import menu.features.userCommand.ValidUsersList;
+import entity.ValidUsersList;
 import services.observer.Observer;
 import services.observer.Subject;
 

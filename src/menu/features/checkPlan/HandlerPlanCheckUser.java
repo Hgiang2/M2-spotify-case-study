@@ -1,7 +1,7 @@
 package menu.features.checkPlan;
 
 import constant.Constants;
-import menu.features.userCommand.CurrentUser;
+import entity.CurrentUser;
 
 public class HandlerPlanCheckUser implements HandlerPlan {
     private HandlerPlan next;

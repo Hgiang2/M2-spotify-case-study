@@ -3,7 +3,7 @@ package menu.template;
 import constant.Constants;
 import menu.features.searchCommand.searchNewMusic.CommandExploreNewMusic;
 import menu.features.yourLibrary.CommandLocalLibrary;
-import menu.features.userCommand.CurrentUser;
+import entity.CurrentUser;
 
 public class NavigateMenuMain implements Navigator {
     private void displayMenuMain() {

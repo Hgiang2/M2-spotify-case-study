@@ -1,6 +1,6 @@
 package menu.features.userCommand.logInCommand.chainOfResponsibility;
 
-import menu.features.userCommand.CurrentUser;
+import entity.CurrentUser;
 import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.RequestUser;
 

@@ -7,12 +7,12 @@ public class Artist extends User{
     String stageName;
 
     public Artist(String stageName) {
-        super(Constants.BLANK, Constants.BLANK, "artist");
+        super(Constants.BLANK, Constants.BLANK, "artist", false);
         this.stageName = stageName;
     }
 
     public Artist(String username, String password) {
-        super(username, password, "artist");
+        super(username, password, "artist", false);
     }
 
     @Override

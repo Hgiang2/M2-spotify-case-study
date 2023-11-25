@@ -1,8 +1,8 @@
 package services.validator;
 
 import entity.User;
-import menu.features.userCommand.CurrentUser;
-import menu.features.userCommand.ValidUsersList;
+import entity.CurrentUser;
+import entity.ValidUsersList;
 
 import java.util.List;
 

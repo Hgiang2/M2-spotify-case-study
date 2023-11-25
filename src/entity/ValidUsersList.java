@@ -1,8 +1,7 @@
-package menu.features.userCommand;
+package entity;
 
 import com.google.gson.reflect.TypeToken;
 import constant.Constants;
-import entity.User;
 import services.observer.Observer;
 
 import java.lang.reflect.Type;

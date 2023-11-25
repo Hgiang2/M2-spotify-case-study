@@ -1,6 +1,4 @@
-package menu.features.userCommand;
-
-import entity.User;
+package entity;
 
 import java.util.List;
 

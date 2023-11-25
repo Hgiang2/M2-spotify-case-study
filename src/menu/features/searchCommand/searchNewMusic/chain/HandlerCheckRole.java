@@ -3,7 +3,7 @@ package menu.features.searchCommand.searchNewMusic.chain;
 import constant.Constants;
 import menu.features.searchCommand.HandlerSearchItem;
 import menu.features.searchCommand.SearchNewMusicResult;
-import menu.features.userCommand.CurrentUser;
+import entity.CurrentUser;
 
 public class HandlerCheckRole implements HandlerSearchItem {
     private HandlerSearchItem next;

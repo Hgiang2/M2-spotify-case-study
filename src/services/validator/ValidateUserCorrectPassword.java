@@ -1,7 +1,7 @@
 package services.validator;
 
 import entity.User;
-import menu.features.userCommand.ValidUsersList;
+import entity.ValidUsersList;
 
 import java.util.List;
 
