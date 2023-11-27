@@ -2,8 +2,8 @@ package menu.features.userCommand.signInCommand;
 
 import constant.Constants;
 import menu.features.userCommand.signInCommand.chainOfResponsibility.*;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.features.userCommand.HandlerUser;
 
 public class CommandSignInProcess implements Command {

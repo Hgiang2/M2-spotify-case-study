@@ -1,17 +1,33 @@
 package menu.features.registerArtist;
 
 import entity.Email;
+import entity.EmailList;
+import entity.Request;
+import entity.RequestList;
+import services.observer.Observer;
+import services.observer.Subject;
 
-public class HandlerSetEmail implements HandlerString {
+public class HandlerSetEmail extends Subject implements HandlerString {
     private HandlerString next;
+    private Request request;
 
-    public HandlerSetEmail(HandlerString next) {
+    public HandlerSetEmail(HandlerString next, Request request) {
         this.next = next;
+        this.request = request;
     }
 
     @Override
     public boolean doHandle(String stageName) {
-        Email.getInstance().setEmail(stageName);
+        Observer observeEmail = EmailList.getInstance();
+        Observer observeRequest = RequestList.getInstance();
+        addObserver(observeEmail);
+        addObserver(observeRequest);
+        Email email = new Email(stageName);
+        email.getRequestList().add(request);
+        request.setEmail(stageName);
+        EmailList.getInstance().getValidEmail().add(email);
+        notifyObserver();
+        removeAll();
         return true;
     }
 

@@ -1,7 +1,7 @@
 package menu.features.selectSearchResult;
 
 import entity.Playlist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectPlaylist;
 import menu.template.Navigator;
 

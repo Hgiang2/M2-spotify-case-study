@@ -1,12 +1,10 @@
 package menu.features.registerArtist;
 
-import entity.Email;
 import entity.Request;
 import entity.RequestArtistRegistered;
 import entity.RequestList;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateArtistRegisterDone;
-import menu.template.NavigateConfirmStageName;
 import menu.template.Navigator;
 import services.observer.Observer;
 import services.observer.Subject;
@@ -20,10 +18,13 @@ public class CommandNewRegisterArtistRequest extends Subject implements Command 
 
     @Override
     public void execute() {
+        Observer observeRequest = RequestList.getInstance();
+        addObserver(observeRequest);
         Request requestArtistRegister = new RequestArtistRegistered(stageName);
         RequestList.getInstance().add(requestArtistRegister);
-        Email.getInstance().addEmailRequest(requestArtistRegister);
-        Navigator navigator = new NavigateArtistRegisterDone();
+        notifyObserver();
+        removeAll();
+        Navigator navigator = new NavigateArtistRegisterDone(requestArtistRegister);
         navigator.navigate();
     }
 }

@@ -1,6 +1,6 @@
 package menu.features.addToPlaylists.selectSongs;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateAddToPlaylists;
 import menu.template.Navigator;
 import services.AllSongListManagement;

@@ -1,6 +1,6 @@
 package menu.features.yourLibrary.allPlaylists;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateAllPlaylists;
 import menu.template.NavigateDisplayAllPlaylistsToChoose;
 import menu.template.Navigator;

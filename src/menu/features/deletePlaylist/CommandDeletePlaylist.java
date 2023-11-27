@@ -1,7 +1,7 @@
 package menu.features.deletePlaylist;
 
 import entity.Playlist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateDeletePlaylist;
 import menu.template.Navigator;
 

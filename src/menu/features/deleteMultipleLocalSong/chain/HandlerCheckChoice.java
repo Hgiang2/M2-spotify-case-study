@@ -3,7 +3,7 @@ package menu.features.deleteMultipleLocalSong.chain;
 import menu.features.addToPlaylists.selectSongs.HandleChooseMultipleSong;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;
 import menu.features.deleteMultipleLocalSong.CommandDeleteMultipleSongProcess;
-import menu.template.Command;
+import menu.features.Command;
 import services.AllSongListManagement;
 
 public class HandlerCheckChoice implements HandleChooseMultipleSong {

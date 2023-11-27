@@ -1,9 +1,8 @@
 package menu.features.checkPlan.inputMonth;
 
-import constant.Constants;
 import menu.features.addToFavorites.addMultiple.CommandInputMultipleInt;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 
 public class CommandInputMonthProcess implements Command {
     @Override

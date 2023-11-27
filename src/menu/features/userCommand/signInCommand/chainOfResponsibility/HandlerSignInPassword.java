@@ -1,6 +1,6 @@
 package menu.features.userCommand.signInCommand.chainOfResponsibility;
 
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.RequestUser;
 import menu.features.userCommand.signInCommand.CommandInputPassword;

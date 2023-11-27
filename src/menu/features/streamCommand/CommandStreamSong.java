@@ -1,6 +1,6 @@
 package menu.features.streamCommand;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import services.AllSongListManagement;
 

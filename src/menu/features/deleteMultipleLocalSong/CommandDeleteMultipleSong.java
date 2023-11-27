@@ -1,6 +1,6 @@
 package menu.features.deleteMultipleLocalSong;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateDeleteMultipleLocalSong;
 import menu.template.Navigator;
 

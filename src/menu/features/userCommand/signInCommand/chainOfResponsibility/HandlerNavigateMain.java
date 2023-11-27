@@ -4,6 +4,8 @@ import constant.Constants;
 import entity.CurrentUser;
 import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.RequestUser;
+import menu.template.NavigateMenuAdmin;
+import menu.template.NavigateMenuArtist;
 import menu.template.NavigateMenuMain;
 import menu.template.NavigateMenuNormalMain;
 import menu.template.Navigator;
@@ -21,8 +23,12 @@ public class HandlerNavigateMain implements HandlerUser {
         Navigator navigator;
         if (role.equals(Constants.NORMAL_USER)) {
             navigator = new NavigateMenuNormalMain();
-        } else {
+        } else if (role.equals(Constants.PREMIUM_USER)) {
             navigator = new NavigateMenuMain();
+        } else if (role.equals(Constants.ARTIST)) {
+            navigator = new NavigateMenuArtist(requestUser.getUsername());
+        } else {
+            navigator = new NavigateMenuAdmin();
         }
         navigator.navigate();
         return true;

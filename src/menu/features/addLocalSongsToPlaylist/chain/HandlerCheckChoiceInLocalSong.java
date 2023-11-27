@@ -3,7 +3,7 @@ package menu.features.addLocalSongsToPlaylist.chain;
 import menu.features.addLocalSongsToPlaylist.CommandAddLocalSongsToPlaylistProcess;
 import menu.features.addToPlaylists.selectSongs.HandleChooseMultipleSong;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import services.AllSongListManagement;
 import services.AllSongsListManagement;

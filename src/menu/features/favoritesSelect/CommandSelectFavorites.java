@@ -1,6 +1,6 @@
 package menu.features.favoritesSelect;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectFavoritesMenu;
 import menu.template.Navigator;
 

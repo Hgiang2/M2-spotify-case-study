@@ -1,6 +1,6 @@
 package menu.features.checkPlan;
 
-import menu.template.Command;
+import menu.features.Command;
 
 public class CommandCheckPlan implements Command {
     @Override

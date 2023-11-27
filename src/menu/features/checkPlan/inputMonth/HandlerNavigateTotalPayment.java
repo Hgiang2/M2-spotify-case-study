@@ -1,6 +1,6 @@
 package menu.features.checkPlan.inputMonth;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateTotalPayment;
 import menu.template.Navigator;
 

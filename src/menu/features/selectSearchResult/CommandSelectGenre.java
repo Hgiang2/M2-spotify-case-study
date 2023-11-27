@@ -1,6 +1,6 @@
 package menu.features.selectSearchResult;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectGenre;
 import menu.template.Navigator;
 

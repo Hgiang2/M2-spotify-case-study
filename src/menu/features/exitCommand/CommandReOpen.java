@@ -1,6 +1,6 @@
 package menu.features.exitCommand;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateMenuStart;
 import menu.template.Navigator;
 

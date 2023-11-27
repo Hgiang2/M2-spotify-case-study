@@ -1,6 +1,6 @@
 package menu.features.exitCommand;
 
-import menu.template.Command;
+import menu.features.Command;
 
 public class CommandEndProgram implements Command {
     @Override

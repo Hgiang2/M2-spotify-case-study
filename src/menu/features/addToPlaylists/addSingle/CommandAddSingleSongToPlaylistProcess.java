@@ -1,7 +1,7 @@
 package menu.features.addToPlaylists.addSingle;
 
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.addToPlaylists.addSingle.chain.HandlerCheckPlaylistListEmpty;
 import menu.features.addToPlaylists.addSingle.chain.HandlerNavigateAllPlaylist;

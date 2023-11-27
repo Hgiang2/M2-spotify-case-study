@@ -1,6 +1,6 @@
 package menu.features.registerArtist;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateEnterStageName;
 import menu.template.Navigator;
 

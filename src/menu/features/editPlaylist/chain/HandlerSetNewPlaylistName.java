@@ -2,7 +2,7 @@ package menu.features.editPlaylist.chain;
 
 import entity.Playlist;
 import menu.features.editPlaylist.HandleEditPlaylist;
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.features.createPlaylist.CommandInputPlaylistName;
 import services.AllPlaylistsListManagement;
 import services.observer.Observer;

@@ -1,8 +1,8 @@
 package menu.features.createPlaylist;
 
 import entity.Playlist;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.NavigateAllPlaylists;
 import menu.template.Navigator;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;

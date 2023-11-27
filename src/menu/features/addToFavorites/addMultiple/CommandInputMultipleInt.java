@@ -1,6 +1,6 @@
 package menu.features.addToFavorites.addMultiple;
 
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 
 import java.util.Scanner;
 

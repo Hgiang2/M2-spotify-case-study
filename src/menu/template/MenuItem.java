@@ -1,5 +1,7 @@
 package menu.template;
 
+import menu.features.Command;
+
 public class MenuItem {
     private String name;
     private Command command;

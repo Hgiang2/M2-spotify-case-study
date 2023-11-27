@@ -1,6 +1,6 @@
 package menu.features.addToPlaylists.selectPlaylists.chain;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.addToPlaylists.selectPlaylists.CommandSelectMultiplePlaylistProcess;
 import menu.features.addToPlaylists.selectPlaylists.HandleChooseMultipleItems;

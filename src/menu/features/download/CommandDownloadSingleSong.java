@@ -5,7 +5,7 @@ import menu.features.addToPlaylists.selectSongs.HandleChooseMultipleSong;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;
 import menu.features.download.chain.HandlerCheckExisted;
 import menu.features.download.chain.HandlerNavigateBack;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import services.AllSongsListManagement;
 

@@ -1,7 +1,7 @@
 package menu.features.selectRequest;
 
 import entity.Request;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectRequest;
 import menu.template.Navigator;
 

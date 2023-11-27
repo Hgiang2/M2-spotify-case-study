@@ -1,6 +1,6 @@
 package menu.features.removeMultiple;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateRemoveMultipleFromPlaylist;
 import menu.template.Navigator;
 import services.AllSongListManagement;

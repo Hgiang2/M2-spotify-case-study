@@ -1,7 +1,7 @@
 package menu.features.createPlaylist.chain;
 
 import entity.Playlist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.createPlaylist.HandlePlaylist;
 import menu.features.exitCommand.CommandBack;

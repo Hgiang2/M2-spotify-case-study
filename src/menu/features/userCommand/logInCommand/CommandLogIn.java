@@ -1,6 +1,6 @@
 package menu.features.userCommand.logInCommand;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateMenuLogIn;
 import menu.template.Navigator;
 

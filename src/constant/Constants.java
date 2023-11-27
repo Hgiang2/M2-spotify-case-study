@@ -1,6 +1,6 @@
 package constant;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateMenuMain;
 import menu.template.NavigateMenuStart;
 import menu.features.exitCommand.CommandBack;
@@ -33,6 +33,7 @@ public interface Constants {
     String ARTIST = "artist";
     String ADMIN = "admin";
     String ALL_SONG_FILE_PATH = "data/localSongs.json";
+    String ALL_EMAIL_FILE_PATH = "data/validEmail.json";
     String ALL_PLAYLIST_FILE_PATH = "data/playlist.json";
     String SPOTIFY_SONG_FILE_PATH = "data/spotifySongs.json";
     String VALID_USER_FILE_PATH = "data/validUsers.json";

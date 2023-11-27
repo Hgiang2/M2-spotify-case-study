@@ -1,7 +1,7 @@
 package menu.features.selectSearchResult;
 
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectLocalSong;
 import menu.template.Navigator;
 

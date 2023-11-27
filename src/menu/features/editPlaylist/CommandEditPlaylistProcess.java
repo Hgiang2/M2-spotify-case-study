@@ -1,8 +1,8 @@
 package menu.features.editPlaylist;
 
 import entity.Playlist;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.NavigateSelectPlaylist;
 import menu.template.Navigator;
 import menu.features.createPlaylist.CommandInputPlaylistName;

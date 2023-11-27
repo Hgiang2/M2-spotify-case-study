@@ -1,7 +1,7 @@
 package menu.features.selectSearchResult;
 
 import entity.Artist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSelectNormalSpotifyArtist;
 import menu.template.Navigator;
 

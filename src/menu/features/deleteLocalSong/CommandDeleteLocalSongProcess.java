@@ -1,7 +1,7 @@
 package menu.features.deleteLocalSong;
 
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateLocalLibrary;
 import menu.template.Navigator;
 import services.AllArtistsListManagement;

@@ -1,4 +1,4 @@
-package menu.template;
+package menu.features;
 
 public interface Command {
     void execute();

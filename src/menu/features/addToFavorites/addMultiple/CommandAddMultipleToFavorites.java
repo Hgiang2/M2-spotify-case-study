@@ -1,6 +1,6 @@
 package menu.features.addToFavorites.addMultiple;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateAddMultipleToFavorites;
 import menu.template.Navigator;
 import services.AllSongListManagement;

@@ -1,6 +1,6 @@
 package menu.features.searchCommand.searchNewMusic;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateExploreNewMusic;
 import menu.template.Navigator;
 

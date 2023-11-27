@@ -1,6 +1,6 @@
 package menu.features.checkPlan;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateUpgradeCost;
 import menu.template.Navigator;
 

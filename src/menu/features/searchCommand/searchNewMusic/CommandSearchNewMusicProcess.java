@@ -1,8 +1,8 @@
 package menu.features.searchCommand.searchNewMusic;
 
 import menu.features.searchCommand.searchNewMusic.chain.HandlerCheckRole;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.features.searchCommand.HandlerSearchItem;
 import menu.features.searchCommand.SearchNewMusicResult;
 import menu.features.searchCommand.searchNewMusic.chain.HandlerCheckArtistName;

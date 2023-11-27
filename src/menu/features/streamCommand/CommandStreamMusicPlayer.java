@@ -1,7 +1,7 @@
 package menu.features.streamCommand;
 
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.musicPlayer.MusicPlayer;
 

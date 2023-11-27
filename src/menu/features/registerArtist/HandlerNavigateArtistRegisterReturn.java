@@ -12,6 +12,7 @@ public class HandlerNavigateArtistRegisterReturn implements HandlerString {
 
     @Override
     public boolean doHandle(String stageName) {
+        System.out.println();
         System.out.println("Email collected!...");
         try {
             Thread.sleep(500);

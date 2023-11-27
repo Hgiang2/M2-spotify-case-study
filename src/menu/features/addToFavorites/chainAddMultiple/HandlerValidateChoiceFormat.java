@@ -1,6 +1,6 @@
 package menu.features.addToFavorites.chainAddMultiple;
 
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.features.addToFavorites.addMultiple.CommandInputMultipleInt;
 import menu.features.addToFavorites.addMultiple.HandleAddToFavorites;
 import services.AllSongListManagement;

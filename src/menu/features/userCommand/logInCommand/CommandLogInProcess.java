@@ -2,8 +2,8 @@ package menu.features.userCommand.logInCommand;
 
 import constant.Constants;
 import menu.features.userCommand.signInCommand.chainOfResponsibility.HandlerNavigateMain;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.logInCommand.chainOfResponsibility.HandlerCheckLogInPassword;
 import menu.features.userCommand.logInCommand.chainOfResponsibility.HandlerLogInPassword;

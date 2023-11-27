@@ -1,7 +1,7 @@
 package menu.features.addToFavorites.addSingle;
 
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.addToFavorites.chainAddSingle.HandlerAddSingleToFavorites;
 import menu.features.addToFavorites.chainAddSingle.HandlerCheckSongExisted;

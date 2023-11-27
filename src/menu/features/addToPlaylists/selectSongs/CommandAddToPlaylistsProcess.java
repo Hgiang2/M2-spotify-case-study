@@ -1,7 +1,7 @@
 package menu.features.addToPlaylists.selectSongs;
 
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.Navigator;
 import menu.features.addToFavorites.addMultiple.CommandInputMultipleInt;
 import menu.features.addToPlaylists.selectSongs.chain.HandlerCheckChoice;

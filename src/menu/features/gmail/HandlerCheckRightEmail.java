@@ -1,8 +1,9 @@
 package menu.features.gmail;
 
-import entity.Email;
 import menu.features.registerArtist.HandlerString;
-import menu.template.Command;
+import services.validator.ValidateEmailExisted;
+import services.validator.ValidateEmailFormat;
+import services.validator.Validator;
 
 public class HandlerCheckRightEmail implements HandlerString {
     private HandlerString next;
@@ -13,15 +14,15 @@ public class HandlerCheckRightEmail implements HandlerString {
 
     @Override
     public boolean doHandle(String stageName) {
-        return Email.getInstance().getEmail().equals(stageName);
+        Validator validateFormat = new ValidateEmailFormat(stageName);
+        Validator validateExisted = new ValidateEmailExisted(stageName);
+        return validateFormat.isCheck() && validateExisted.isCheck();
     }
 
     @Override
     public void handle(String stageName) {
         if (!doHandle(stageName)) {
-            System.out.println("No such email existed!");
-            Command reInput = new CommandInputEmailGmail();
-            reInput.execute();
+            next = new HandlerNavigateWrongEmail(null);
         }
         if (next != null) {
             next.handle(stageName);

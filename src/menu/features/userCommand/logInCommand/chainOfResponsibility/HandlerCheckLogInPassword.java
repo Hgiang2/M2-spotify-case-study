@@ -1,7 +1,7 @@
 package menu.features.userCommand.logInCommand.chainOfResponsibility;
 
 import constant.Constants;
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import services.validator.Validator;
 import services.validator.ValidateUserCorrectPassword;
 import menu.features.userCommand.HandlerUser;

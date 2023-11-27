@@ -1,6 +1,6 @@
 package menu.features.makePayment;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateMakePayment;
 import menu.template.Navigator;
 

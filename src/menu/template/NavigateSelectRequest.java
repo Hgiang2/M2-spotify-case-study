@@ -1,6 +1,8 @@
 package menu.template;
 
+import constant.Constants;
 import entity.Request;
+import menu.features.exitCommand.CommandBack;
 
 public class NavigateSelectRequest implements Navigator{
     private Request request;
@@ -9,6 +11,9 @@ public class NavigateSelectRequest implements Navigator{
         this.request = request;
     }
     private void displayRequestMenu() {
+        Menu menu = new MenuTemplate("Request Selected", request.getGmailMessage() + "\n");
+        menu.addMenuItem(new MenuItem(Constants.RETURN, new CommandBack(new NavigateGmailMenu())));
+        menu.runMenu();
 
     }
 

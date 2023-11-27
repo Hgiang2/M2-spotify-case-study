@@ -4,7 +4,6 @@ import entity.User;
 import entity.CurrentUser;
 import entity.ValidUsersList;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ValidateUserExisted implements Validator {

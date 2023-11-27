@@ -1,8 +1,6 @@
 package menu.features.gmail;
 
-import entity.Email;
 import menu.features.registerArtist.HandlerString;
-import menu.template.NavigateGmail;
 import menu.template.NavigateGmailMenu;
 import menu.template.Navigator;
 

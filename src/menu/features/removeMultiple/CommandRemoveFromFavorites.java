@@ -2,7 +2,7 @@ package menu.features.removeMultiple;
 
 import entity.Favorites;
 import entity.Song;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import services.AllPlaylistsListManagement;
 import services.observer.Observer;

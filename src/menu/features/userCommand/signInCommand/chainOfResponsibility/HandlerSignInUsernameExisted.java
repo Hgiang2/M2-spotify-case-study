@@ -1,7 +1,7 @@
 package menu.features.userCommand.signInCommand.chainOfResponsibility;
 
 import constant.Constants;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateWrongAttempts;
 import menu.template.Navigator;
 import menu.features.userCommand.HandlerUser;

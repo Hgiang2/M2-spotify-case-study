@@ -2,7 +2,7 @@ package menu.features.deleteLocalSong;
 
 import entity.Song;
 import menu.template.NavigateWantToDeleteThisSong;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 
 public class CommandDeleteLocalSong implements Command {

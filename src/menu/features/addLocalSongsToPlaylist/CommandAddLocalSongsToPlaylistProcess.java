@@ -2,8 +2,8 @@ package menu.features.addLocalSongsToPlaylist;
 
 import menu.features.addLocalSongsToPlaylist.chain.HandlerCheckChoiceInLocalSong;
 import menu.features.addLocalSongsToPlaylist.chain.HandlerSetSelectLocalSong;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.Navigator;
 import menu.features.addLocalSongsToPlaylist.chain.HandlerAddSongsToSelectPlaylist;
 import menu.features.addToFavorites.addMultiple.CommandInputMultipleInt;

@@ -1,11 +1,6 @@
 package entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class User {
-    private List<Request> requestList = new ArrayList<>();
-//    private String email;
     private String username;
     private String password;
     private String role;
@@ -56,14 +51,6 @@ public class User {
 
     public Plan getPlan() {
         return plan;
-    }
-
-    public List<Request> getRequestList() {
-        return requestList;
-    }
-
-    public void setRequestList(List<Request> requestList) {
-        this.requestList = requestList;
     }
 
     public void setPlan(boolean isSubscribe) {

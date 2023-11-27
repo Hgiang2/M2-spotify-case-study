@@ -1,8 +1,8 @@
 package menu.features.registerArtist;
 
 import menu.features.userCommand.signInCommand.CommandInputUsername;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 
 public class CommandInputStageName implements Command {
     @Override

@@ -8,8 +8,8 @@ import menu.features.addToPlaylists.selectSongs.chain.HandlerSetSelectedSong;
 import menu.features.addToPlaylists.selectSongs.chain.HandlerValidChoiceFormatPlaylist;
 import menu.features.download.chain.HandlerCheckExisted;
 import menu.features.download.chain.HandlerNavigateBack;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.Navigator;
 import services.AllSongListManagement;
 

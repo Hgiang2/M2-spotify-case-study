@@ -1,7 +1,7 @@
 package menu.features.editPlaylist;
 
 import entity.Playlist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateEditPlaylist;
 import menu.template.Navigator;
 

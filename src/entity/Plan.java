@@ -1,8 +1,6 @@
 package entity;
 
 import constant.Constants;
-import services.observer.Observer;
-import services.observer.Subject;
 import services.singleton.FormatDate;
 
 import java.time.LocalDate;

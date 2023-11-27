@@ -7,8 +7,8 @@ import menu.features.addToPlaylists.selectSongs.SelectedItems;
 import menu.features.addToPlaylists.selectSongs.chain.HandlerValidChoiceFormatPlaylist;
 import menu.features.deleteMultipleLocalSong.chain.HandlerCheckChoice;
 import menu.features.deleteMultipleLocalSong.chain.HandlerConfirmDelete;
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import services.AllSongListManagement;
 import services.AllSongsListManagement;
 

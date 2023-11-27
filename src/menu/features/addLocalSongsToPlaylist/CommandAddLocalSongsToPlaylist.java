@@ -1,7 +1,7 @@
 package menu.features.addLocalSongsToPlaylist;
 
 import entity.Playlist;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateChooseLocalSongs;
 import menu.template.Navigator;
 

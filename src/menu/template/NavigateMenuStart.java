@@ -2,6 +2,7 @@ package menu.template;
 
 import constant.Constants;
 import entity.Admin;
+import entity.EmailList;
 import entity.Favorites;
 import entity.RequestList;
 import entity.ValidUsersList;
@@ -26,6 +27,7 @@ public class NavigateMenuStart extends Subject implements Navigator {
 
     private void createInstance() {
         RequestList.getInstance();
+        EmailList.getInstance();
         if (AllPlaylistsListManagement.getInstance().getAllPlaylists().isEmpty()) {
             Observer observeAllPlaylists = AllPlaylistsListManagement.getInstance();
             addObserver(observeAllPlaylists);

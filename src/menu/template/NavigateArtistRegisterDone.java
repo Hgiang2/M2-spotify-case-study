@@ -1,10 +1,15 @@
 package menu.template;
 
-import constant.Constants;
-import menu.features.exitCommand.CommandBack;
+import entity.Request;
 import menu.features.registerArtist.CommandInputEmail;
 
 public class NavigateArtistRegisterDone implements Navigator{
+    private Request request;
+
+    public NavigateArtistRegisterDone(Request request) {
+        this.request = request;
+    }
+
     private void displayDoneMenu() {
         System.out.println();
         System.out.println("Uploading your Artist credentials......");
@@ -22,7 +27,7 @@ public class NavigateArtistRegisterDone implements Navigator{
         }
         System.out.println();
         Menu menu = new MenuInputTemplate("Register Artist Done!", "Your register request has been sent and waited to be approved!");
-        menu.addMenuItem(new MenuItem("Enter your email address to receive notifications: ", new CommandInputEmail()));
+        menu.addMenuItem(new MenuItem("Enter your email address to receive notifications: ", new CommandInputEmail(request)));
         menu.runMenu();
     }
 

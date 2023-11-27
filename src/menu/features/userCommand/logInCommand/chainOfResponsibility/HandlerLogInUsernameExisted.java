@@ -5,7 +5,7 @@ import menu.features.userCommand.HandlerUser;
 import menu.features.userCommand.RequestUser;
 import menu.features.userCommand.logInCommand.CommandLogInProcess;
 import menu.features.userCommand.signInCommand.CommandInputUsername;
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.template.NavigateWrongAttempts;
 import menu.template.Navigator;
 import services.validator.ValidateUserExisted;

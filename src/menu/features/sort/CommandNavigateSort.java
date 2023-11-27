@@ -1,6 +1,6 @@
 package menu.features.sort;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateMenuSort;
 import menu.template.Navigator;
 import services.Sortable;

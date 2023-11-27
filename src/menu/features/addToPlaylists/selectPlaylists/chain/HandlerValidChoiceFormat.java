@@ -1,6 +1,6 @@
 package menu.features.addToPlaylists.selectPlaylists.chain;
 
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.features.addToFavorites.addMultiple.CommandInputMultipleInt;
 import menu.features.addToPlaylists.selectPlaylists.HandleChooseMultipleItems;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;

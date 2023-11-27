@@ -2,7 +2,7 @@ package menu.features.deleteMultipleLocalSong;
 
 import entity.Song;
 import menu.features.addToPlaylists.selectSongs.SelectedItems;
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateAllSongs;
 import menu.template.Navigator;
 import services.AllArtistsListManagement;

@@ -1,7 +1,6 @@
 package menu.features.exitCommand;
 
-import menu.template.Command;
-import menu.template.NavigateExit;
+import menu.features.Command;
 import menu.template.NavigateGmail;
 import menu.template.Navigator;
 

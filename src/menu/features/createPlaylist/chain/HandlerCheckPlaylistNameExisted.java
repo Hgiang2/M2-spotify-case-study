@@ -1,7 +1,7 @@
 package menu.features.createPlaylist.chain;
 
 import entity.Playlist;
-import menu.template.CommandInput;
+import menu.features.CommandInput;
 import menu.features.createPlaylist.CommandInputPlaylistName;
 import menu.features.createPlaylist.HandlePlaylist;
 import services.AllPlaylistsListManagement;

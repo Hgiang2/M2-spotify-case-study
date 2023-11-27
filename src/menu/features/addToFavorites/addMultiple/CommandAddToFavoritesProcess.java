@@ -1,7 +1,7 @@
 package menu.features.addToFavorites.addMultiple;
 
-import menu.template.Command;
-import menu.template.CommandInput;
+import menu.features.Command;
+import menu.features.CommandInput;
 import menu.template.Navigator;
 import menu.features.addToFavorites.chainAddMultiple.HandlerAddMultipleToFavorites;
 import menu.features.addToFavorites.chainAddMultiple.HandlerNavigateBack;

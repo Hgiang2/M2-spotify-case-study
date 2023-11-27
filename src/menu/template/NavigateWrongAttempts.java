@@ -1,6 +1,7 @@
 package menu.template;
 
 import constant.Constants;
+import menu.features.Command;
 
 public class NavigateWrongAttempts implements Navigator{
     public Command commandBack;

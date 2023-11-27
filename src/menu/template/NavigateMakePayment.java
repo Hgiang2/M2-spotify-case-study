@@ -4,7 +4,6 @@ import constant.Constants;
 import entity.CurrentUser;
 import entity.Plan;
 import entity.ValidUsersList;
-import menu.features.checkPlan.HandlerPlanNavigateCheckPlanPremium;
 import menu.features.exitCommand.CommandBack;
 import services.observer.Observer;
 import services.observer.Subject;

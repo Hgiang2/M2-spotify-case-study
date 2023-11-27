@@ -1,6 +1,6 @@
 package menu.features.searchCommand.searchLocalLibrary;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateSearchLocalLibrary;
 import menu.template.Navigator;
 

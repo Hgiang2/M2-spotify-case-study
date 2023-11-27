@@ -1,6 +1,6 @@
 package menu.features.yourLibrary;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.NavigateAllSongs;
 import menu.template.Navigator;
 

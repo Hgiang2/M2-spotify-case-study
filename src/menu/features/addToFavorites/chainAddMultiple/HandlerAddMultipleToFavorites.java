@@ -1,6 +1,6 @@
 package menu.features.addToFavorites.chainAddMultiple;
 
-import menu.template.Command;
+import menu.features.Command;
 import menu.template.Navigator;
 import menu.features.addToFavorites.addMultiple.CommandAddToFavoritesProcess;
 import menu.features.addToFavorites.addMultiple.HandleAddToFavorites;
